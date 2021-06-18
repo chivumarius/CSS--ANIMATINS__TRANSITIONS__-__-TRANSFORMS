@@ -1,0 +1,61 @@
+/* SELECTORUL 'DIV' */
+div {
+  width: 150px;
+  height: 150px;
+  background-color: #27ae60;
+  display: block;
+  margin: auto;
+  margin-bottom: 70px;
+  color: white;
+  font-size: 24px;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  line-height: 50px;
+  transition: transform 1s;
+}
+
+/* HOVER - 'DIV' */
+div:hover {
+  /* COORDONATA 0,0 = CENTRUL IMAGINEI  */
+  transform: rotate(45deg);
+}
+
+.top {
+  /* COORDONATA 0,0 = SUS, CENTRUL   */
+  transform-origin: top;
+}
+
+.right {
+  /* COORDONATA 0,0 = DREAPTA, CENTRUL   */
+  transform-origin: right;
+}
+
+.left {
+  /* COORDONATA 0,0 = STANGA, CENTRUL   */
+  transform-origin: left;
+}
+
+.bottom {
+  /* COORDONATA 0,0 = JOS, CENTRUL   */
+  transform-origin: bottom;
+}
+
+.top-right {
+  /* COORDONATA 0,0 = 'SUS, DREAPTA'   */
+  transform-origin: top right;
+}
+
+.top-left {
+  /* COORDONATA 0,0 = 'SUS, STANGA'   */
+  transform-origin: top left;
+}
+
+.bottom-right {
+  /* COORDONATA 0,0 = 'JOS, DREAPTA'   */
+  transform-origin: bottom right;
+}
+
+.bottom-left {
+  /* COORDONATA 0,0 = 'JOS, STANGA'   */
+  transform-origin: bottom left;
+}
