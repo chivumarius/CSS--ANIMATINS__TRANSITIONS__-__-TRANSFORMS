@@ -1,0 +1,28 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE 'SCHIMBARE A STARI' = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 2s;
+}
+
+/* HOVER -'IMG' */
+img:hover {
+  /* PROP. 'TRANSFORM' - CU FUNC. 'SKEW(DEG)' = '360DEG' */
+  /* FUNC. 'SKEWX(DEG)' (PT 'INCLINAREA ORIZONTALA - LA STAMGA' A ELEM. PE AXA 'X')  */
+  /* transform: skewX(30deg); */
+
+  /* FUNC. 'SKEWX(-DEG)' (PT 'INCLINAREA ORIZONTALA - LA DREAPTA' A ELEM. PE AXA 'X')  */
+  /* transform: skewX(-30deg); */
+
+  /* FUNC. 'SKEWY(DEG)' (PT 'INCLINAREA VERTICALA - LA DREAPTA - IN JOS' A ELEM. PE AXA 'Y')  */
+  /* transform: skewY(30deg); */
+
+  /* FUNC. 'SKEWY(-DEG)' (PT 'INCLINAREA VERTICALA - LA STANGA - IN JOS' A ELEM. PE AXA 'Y')  */
+  /* transform: skewY(-30deg); */
+
+  /* FUNC. 'SKEW(X, Y)' (PT 'INCLINAREA ORIZONTALA & VERTICALA ' A ELEM. PE AXA 'X, Y')  */
+  transform: skew(20deg, 40deg);
+}
