@@ -1,0 +1,28 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE SCHIMBARE = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 2s;
+}
+
+/* HOVER -'IMG' */
+img:hover {
+  /* PROP. 'TRANSFORM' - CU FUNC. 'SCALEX(X)' */
+  /* FUNC. 'SCALEX(X)' (ACCEPTA NR PT A INDICA 'MARIREA' PE AXA 'X')  */
+  /* transform: scaleX(2); */
+
+  /* FUNC. 'SCALEX(X)' (PT 'MICSORAREA' PE AXA 'X')  */
+  /* transform: scaleX(0.3); */
+
+  /* FUNC. 'SCALEY(Y)' (PT 'MARIREA' PE AXA 'Y')  */
+  /* transform: scaleY(2); */
+
+  /* FUNC. 'SCALEY(Y)' (PT 'MICSORAREA' PE AXA 'Y')  */
+  /* transform: scaleY(0.5); */
+
+  /* FUNC. 'SCALE(X, Y)' (PT 'MARIREA' PE AXA 'X, Y')  */
+  transform: scale(2, 2);
+}
