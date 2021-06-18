@@ -1,0 +1,30 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE SCHIMBARE = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 2s;
+}
+
+/* HOVER -'IMG' */
+img:hover {
+  /* PROP. 'TRANSFORM' - CU FUNC. 'ROTATE(DEG)' = '360DEG' */
+  /* FUNC. 'ROTATE(DEG)' (PT 'ROTIREAA' ELEM. IN 'SENSUL ACELOR DE CEASORNIC')  */
+  /* transform: rotate(20deg); */
+
+  /* FUNC. 'ROTATE(DEG)' (PT 'ROTIREAA' ELEM. CONTRAR 'SENSULUI ACELOR DE CEASORNIC')  */
+  /* transform: rotate(-60deg); */
+
+  /* ROTIREA COMPLERA (PRIN U.M. 'TURN' = '1TURN') */
+  /* FUNC. 'ROTATE(TURN)' (PT 'ROTIREAA COMPLETA' A ELEM. IN 'SENSUL ACELOR DE CEASORNIC')  */
+  /* transform: rotate(1turn); */
+
+  /* FUNC. 'ROTATE(-TURN)' (PT 'ROTIREAA COMPLETA / INCOMPLETA' A ELEM. - CONTRAR 'SENSULUI ACELOR DE CEASORNIC')  */
+  /* transform: rotate(-0.5turn); */
+
+  /* ROTIREA COMPLERA (PRIN U.M. 'GRAD' (GRADIAN) = '400GRAD') */
+  /* FUNC. 'ROTATE(TURN)' (PT 'ROTIREAA COMPLETA / INCOMPLETA' A ELEM. IN 'SENSUL ACELOR DE CEASORNIC')  */
+  transform: rotate(100grad);
+}
