@@ -51,7 +51,7 @@ div:hover {
 }
 
 .bottom-right {
-  /* COORDONATA 0,0 = 'JOS, DREAPTA'   */
+  /* COORDONATA 0,0 = 'SUS, DREAPTA'   */
   transform-origin: bottom right;
 }
 
