@@ -1,0 +1,36 @@
+/* SELECTORUL 'DIV' */
+div {
+  height: 150px;
+  width: 150px;
+  background-color: #40739e;
+  color: white;
+  line-height: 150px;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  /* TRANZITIONAREA/SCHIMBAREA PROP. 'TRANSFORM' IN '1 SEC' */
+  transition: transform 1s;
+}
+
+/* HOVER - CLS. 'SCALE' (PT SCALARE ELEMENT) */
+.scale:hover {
+  transform: scale(1.2);
+}
+
+/* HOVER - CLS. 'TRANSLATE' (PT MUTARE ELEMENT) */
+.translate:hover {
+  transform: translateX(320px);
+}
+
+/* HOVER - CLS. 'ROTATE' (PT ROTIRE ELEMENT) */
+.rotate:hover {
+  transform: rotate(180deg);
+}
+
+/* HOVER - CLS. 'SKEW' (PT. INCLINARE ELEMENT) */
+.skew:hover {
+  transform: skew(20deg);
+}
