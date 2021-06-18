@@ -1,0 +1,25 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE 'SCHIMBARE A STARI' = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 1s;
+}
+
+/* CLS. 'SECOND' */
+.second {
+  /* PROP. 'TRANSFORM-ORIGIN' = 'VERTICAL ORIZONTAL' */
+  transform-origin: top left;
+
+  margin-bottom: 0;
+}
+
+/* HOVER - CLS. 'FIRST' & 'SECOND' */
+.first:hover,
+.second:hover {
+  /* AMBELE CLASE - PRIMESC FUNC. 'ROTATE()' */
+  /* VALOAREA 'IMPLICITA' A 'ORIGINIi' imaginei = ESTE 'CENTRALA' */
+  transform: rotate(30deg);
+}
