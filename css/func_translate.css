@@ -1,0 +1,29 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE SCHIMBARE = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 2s;
+}
+
+/* HOVER -'IMG' */
+img:hover {
+  /* PROP. 'TRANSFORM' - CU FUNC. 'TRANSLATEX(X)' */
+  /* COORDONATA '0, 0' = ESTE COLTUL STANGA SUS AL ECRANULUI */
+  /* transform: translateX(400px); */
+
+  /* FUNC. 'TRANSLATEX()' (PT. 'MISCAREA' PE AXA 'X' - IN 'STANGA')  */
+  /* transform: translateX(-500px); */
+
+  /* FUNC. 'TRANSLATEY(Y)' (PT. 'MISCAREA' PE AXA 'Y' - IN 'SUS')  */
+  /* transform: translateY(-500px); */
+
+  /* FUNC. 'TRANSLATEY(Y)' (PT. 'MISCAREA' PE AXA 'Y' - IN 'JOS')  */
+  /* transform: translateY(400px); */
+
+  /* PROP. 'TRANSFORM' - CU FUNC. 'TRANSLATE(X, Y)'   */
+  /* FUNC. 'TRANSLATE(X, Y)' (PT. 'MISCAREA' PE AXA 'X & Y' - IN 'STANGA JOS')  */
+  transform: translate(-500px, 200px);
+}
