@@ -1,0 +1,83 @@
+/* SELECTORUL 'DIV' */
+div {
+  height: 90px;
+  width: 290px;
+  font-size: 28px;
+  margin: 20px;
+  color: white;
+  border: none;
+  background-color: blue;
+  line-height: 90px;
+  text-align: center;
+  transition: all 1s;
+}
+
+/* HOVER - 'BACKGROUND' */
+.background:hover {
+  background-color: green;
+}
+
+/* HOVER - 'COLOR' */
+.color:hover {
+  color: red;
+}
+
+/* HOVER - 'FONT-SIZE' */
+.font-size:hover {
+  font-size: 32px;
+}
+
+/* HOVER - 'HEIGHT' */
+.height:hover {
+  height: 120px;
+}
+
+/* HOVER - 'WIDTH' */
+.width:hover {
+  width: 340px;
+}
+
+/* HOVER - 'LETTER-SPACING' */
+.letter-spacing:hover {
+  letter-spacing: 5px;
+}
+
+/* HOVER - 'LINE-HEIGHT' */
+.line-height:hover {
+  line-height: 120px;
+}
+
+/* HOVER - 'MARGIN-BOTTOM' */
+.margin-bottom:hover {
+  margin-bottom: 50px;
+}
+
+/* HOVER - 'MARGIN-TOP' */
+.margin-top:hover {
+  margin-top: 50px;
+}
+/* HOVER - 'OPACITY' */
+.opacity:hover {
+  opacity: 0.3;
+}
+
+/* HOVER - 'PADDING' */
+.padding:hover {
+  padding: 20px;
+}
+
+/* CLS. 'BORDER-COLOR' & 'BORDER-WIDTH' */
+.border-color,
+.border-width {
+  border: 6px solid green;
+}
+
+/* HOVER - 'BORDER-COLOR'  */
+.border-color:hover {
+  border-color: red;
+}
+
+/* HOVER -  'BORDER-WIDTH' */
+.border-width:hover {
+  border-width: 12px;
+}
