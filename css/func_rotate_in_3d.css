@@ -1,0 +1,23 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE SCHIMBARE = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 1s;
+}
+
+/* HOVER -'IMG' */
+img:hover {
+  /* PROP. 'TRANSFORM' - CU FUNC. 'ROTATE(DEG)' IN 3D */
+  /* FUNC. 'ROTATEZ(DEG)' (PT 'ROTIREA' ELEM. IN 'SENSUL ACELOR DE CEASORNIC')
+     - ESTE SIMILAR CU FUNC. 'ROTATE()' */
+  /* transform: rotateZ(120deg); */
+
+  /* FUNC. 'ROTATEX(DEG)' (PT 'ROTIREA' ELEM. PE AXA 'X')   */
+  /* transform: rotateX(60deg); */
+
+  /* FUNC. 'ROTATEY(DEG)' (PT 'ROTIREA' ELEM. PE AXA 'Y')   */
+  transform: rotateY(60deg);
+}
