@@ -1,0 +1,48 @@
+/* SELECTORUL 'BODY' */
+body {
+  height: 100vh;
+
+  /* AFISARE 'FLEX' */
+  display: flex;
+
+  /* ALINIEREA PT. 'FLEX' */
+  justify-content: center;
+  align-items: center;
+}
+
+/* SELECTORUL 'A' (PT. STILIZAREA BUTONULUI) */
+a {
+  text-decoration: none;
+  padding: 40px 80px;
+  color: #e1332d;
+  border: 3px solid #e1332d;
+
+  /* TRANSF. CARACTERELOR IN LITERE MARI */
+  text-transform: uppercase;
+
+  font-size: 40px;
+
+  /* UTIL. FONT-ULUI IMPORTAT - 'ROBOTO' */
+  font-family: "roboto";
+
+  /* MICSORAREA GROSIMI FONT-ULUI REGULAR (DEFAULT = 400) */
+  font-weight: 300;
+
+  /* DISTANTA INTRE LITERE */
+  letter-spacing: -2px;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* HOVER - SELECTORUL 'A'  */
+a:hover {
+  /* MARIRE - GROSIME A FONT-ULUI (FONT BOLD (DEFAULT) = 700) */
+  font-weight: 900;
+
+  /* MARIRE - DISTANTA INTRE LITERE */
+  letter-spacing: 10px;
+
+  /* MARIRE - GROSIME 'BORDER' */
+  border: 7px solid #e1332d;
+}
