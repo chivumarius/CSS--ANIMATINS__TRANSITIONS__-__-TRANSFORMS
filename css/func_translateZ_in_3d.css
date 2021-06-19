@@ -1,0 +1,34 @@
+/* SELECTORUL 'IMG' */
+img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  /* PROP. DE SCHIMBARE = A PROP. 'TRANSFORM' IN '2 SEC' */
+  transition: transform 1s;
+}
+
+/* SELECTORUL 'BODY' */
+/* CONTAINER-UL IN CARE DEF. PROP. 'PERSPECTIVE' CERUTA DE FUNC. 'TRANSLATEZ(Z)' */
+body {
+  /* NB! - PERSPECTIVA = '1' (SPEC. O DIM. 'MARE')
+         - PERSPECTIVA = '1000' (SPEC. O DIM. 'MICA')  */
+  perspective: 500px;
+}
+
+/* HOVER -'IMG' */
+img:hover {
+  /* FUNC. 'TRANSLATEZ(Z)' - A PROP. 'TRANSFORM' IN 3D 
+     IN CARE SE DEF. MAI INTAI 'PERSPECTIVA' 
+     (DIST. DINTRE ECRAN & UTILIZATOR) 
+     IN CONTAINER-UL ELEM. (IN 'BODY') */
+
+  /* FUNC. 'TRANSLATEZ(Z)' (PT. 'MISCAREA' PE AXA 'Z' - DA SENZATIA DE MARIRE)  */
+  /* transform: translateZ(300px); */
+
+  /* FUNC. 'TRANSLATEZ(-Z)' (PT. 'MISCAREA' PE AXA 'Z' - DA SENZATIA DE MICSORARE)  */
+  /* transform: translateZ(-300px); */
+
+  /* FUNC. 'TRANSLATEZ(Z)' (PT. 'MISCAREA' PE AXA 'Z' - DA SENZATIA DE MARIRE)  */
+  transform: translateZ(400px);
+}
