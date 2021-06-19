@@ -1,0 +1,61 @@
+/* SELECTORUL 'BODY' */
+body {
+  height: 100vh;
+
+  /* AFISARE 'FLEX' */
+  display: flex;
+
+  /* ALINIEREA PT. 'FLEX' */
+  justify-content: center;
+  align-items: center;
+}
+
+/* SELECTORUL 'A' (PT. STILIZAREA BUTONULUI) */
+a {
+  text-decoration: none;
+  color: #262626;
+  font-family: sans-serif;
+  font-size: 45px;
+  border: 5px solid #262626;
+  padding: 40px 80px;
+  position: relative;
+  /* ASCUNDEM SUPRAPUNEREA PSEUDO-ELEM. 'A:BEFORE' */
+  overflow: hidden;
+}
+
+/* PSEUDO-SELECTORUL 'A:BEFORE' (PT. ADG. DE CONTINUT - IN FATA ELEM. 'A') */
+a:before {
+  /* NU ADAUGAM TEXT - CI DOR EFECTUL DIN PROP. URMATOARE */
+  content: "";
+
+  /* POZITIONAREA 'PUNCTULUI' */
+  position: absolute;
+
+  /* ORIZONTALA: STAMGA  */
+  left: 0;
+
+  /* VERTICALA: SUS  */
+  top: 0;
+
+  /* CONF. PSEUDO-ELEM. 'BEFORE' */
+  background-color: #fff200;
+  height: 100%;
+  width: 100%;
+
+  /* POZITIONAM CONTINUTUL ':BEFORE' - PE AXA 'Z' IN SPATELE TEXTULUI BTN */
+  z-index: -1;
+
+  /* 'COORDONATELE DE ORIGINE' ALE EFECTULUI (DREAPTA JOS) */
+  transform-origin: bottom left;
+
+  /* EFECTUL DE TRANSF. PRIN FUNCT. DE ROTIRE */
+  transform: rotate(-90deg);
+
+  /* DURATA DE TIMP A TRANSFORMARI */
+  transition: transform 1s;
+}
+
+/* HOVER - PSEUDO-SELECTORUL 'A:BEFORE' */
+a:hover:before {
+  transform: rotate(0deg);
+}
