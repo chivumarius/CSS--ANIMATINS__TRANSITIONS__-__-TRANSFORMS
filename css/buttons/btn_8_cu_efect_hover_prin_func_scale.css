@@ -1,0 +1,66 @@
+/* SELECTORUL 'BODY' */
+body {
+  height: 100vh;
+
+  /* AFISARE 'FLEX' */
+  display: flex;
+
+  /* ALINIEREA PT. 'FLEX' */
+  justify-content: center;
+  align-items: center;
+}
+
+/* SELECTORUL 'A' (PT. STILIZAREA BUTONULUI) */
+a {
+  text-decoration: none;
+  color: #262626;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid #262626;
+  padding: 40px 80px;
+  position: relative;
+
+  /* DURATA TRANZITIEI */
+  transition: all 0.5s;
+
+  /* ASCUNDEM SUPRAPUNEREA SELEC. 'A' */
+  overflow: hidden;
+}
+
+/* PSEUDO-SELECTORUL 'A:BEFORE' */
+a:before {
+  /* CONTINUT TEXT PE ELEM. 'BEFORE' */
+  content: "Acopera-ma";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: #262626;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* OPACITATE ELEM. 'BEFORE' (INVIZIBIL) */
+  opacity: 0;
+
+  /* MARIRE ELEM. 'BEFORE'  */
+  transform: scale(5);
+
+  /* DURATA DE TIMP A ELEM 'BEFORE' */
+  transition: all 0.5s;
+}
+
+/* PSEUDO-SELECTORUL 'A:BEFOER' (INAINTEA LUI 'A')  */
+a:hover:before {
+  /* NORMALIZAREA SCALARII  ELEM. 'BEFORE' LA HOVER  */
+  transform: scale(1);
+
+  /* VIZIBILITATE COMPLETA A ELEM. 'BEFORE' LA HOVER */
+  opacity: 1;
+}
