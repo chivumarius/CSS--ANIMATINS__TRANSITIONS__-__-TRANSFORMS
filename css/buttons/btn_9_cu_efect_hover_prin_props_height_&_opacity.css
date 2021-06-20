@@ -1,0 +1,81 @@
+/* SELECTORUL 'BODY' */
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  margin: 0;
+
+  /* AFISARE 'FLEX' */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CLS. 'BTN' (PT. STILIZAREA BUTONULUI) */
+.btn {
+  background: none;
+  color: tomato;
+
+  border: 2px solid tomato;
+  font-size: 25px;
+  padding: 20px 40px;
+
+  /* TRANSF. CARACTERE - IN LITERE MARI */
+  text-transform: uppercase;
+
+  /* SELECTARE TIP CURSOR (MANA) */
+  cursor: pointer;
+
+  position: relative;
+
+  /* DURATA TRANZITIEI */
+  transition: all 0.5s;
+
+  /* ASCUNDEM SUPRAPUNEREA SELEC. 'A' */
+  overflow: hidden;
+}
+
+/* HOVER - CLS. 'BTN' */
+.btn:hover {
+  color: white;
+}
+
+/* PSEUDO-CLASA '.BTN:BEFORE' */
+.btn:before {
+  /* NU AFISAM TEXT */
+  content: "";
+
+  position: absolute;
+
+  /* POZITIONARE ELEM. 'BEFORE' - 'SUS'  */
+  /* top: 0; */
+
+  /* POZITIONARE ELEM. 'BEFORE' - 'JOS'  */
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: tomato;
+
+  /* PLASAM LAYER-UL ':BEFORE' SUB TEXT */
+  z-index: -1;
+
+  /* RAZA ROTUNJITA 'JOS' = 'STANGA-SUS  DREAOTA-SUS SREAPTA-JOS STANGA-JOS' */
+  /* border-radius: 0% 0% 50% 50%; */
+
+  /* RAZA ROTUNJITA 'SUS' = 'STANGA-SUS  DREAOTA-SUS SREAPTA-JOS STANGA-JOS' */
+  border-radius: 50% 50% 0% 0%;
+
+  /* ASCUNDEREA PSEUDO-CLS. ':BEFORE' (PRIN INALTIMEA ZERO) */
+  height: 0%;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* HOVER - PSEUDO-CLASA '.BTN:HOVER:BEFORE' */
+.btn:hover:before {
+  /* MARIREA INALTIMI ELEM. 'BEFORE' */
+  height: 190%;
+}
