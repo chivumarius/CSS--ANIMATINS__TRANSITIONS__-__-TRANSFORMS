@@ -1,0 +1,84 @@
+/* SELECTORUL 'BODY' */
+body {
+  height: 100vh;
+
+  /* AFISARE 'FLEX' */
+  display: flex;
+
+  /* ALINIEREA PT. 'FLEX' */
+  justify-content: center;
+  align-items: center;
+}
+
+/* SELECTORUL 'A' (PT. STILIZAREA BUTONULUI) */
+a {
+  text-decoration: none;
+  background-color: #262626;
+  color: transparent;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 4px solid #262626;
+  padding: 40px 80px;
+  position: relative;
+
+  /* ASCUNDEM SUPRAPUNEREA PSEUDO-ELEM. 'A:BEFORE' */
+  overflow: hidden;
+}
+
+/* PSEUDO-SELECTORUL 'A:BEFOER' (INAINTEA LUI 'A')  */
+a:before {
+  /* ADAUGAM TEXT  */
+  content: "Acopera-ma";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  color: #262626;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* DURATA SCHIMBARII */
+  transition: all 0.5s;
+}
+
+/* PSEUDO-SEL. 'A:AFTER' (DUPA ELEM. 'A') */
+a:after {
+  content: "Acopera-ma";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: #fffa65;
+  color: #262626;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* DURATA DE TIMP */
+  transition: all 0.5s;
+
+  /* POZITIONAREA 'AFTER' IN 'STANGA JOS' */
+  transform: translate(-100%, 100%);
+}
+
+/* HOVER - PSEUDO-SELECTORUL 'A:BEFORE' */
+a:hover:before {
+  /* MUTAREA 'BEFORE' IN 'DREAPTA' IN 'SUS' */
+  transform: translate(100%, -100%);
+}
+
+/* HOVER - PSEUDO-SELECTORUL 'A:AFTER' */
+a:hover:after {
+  /* MUTAREA 'AFTER' PE POZITIA 'INITIALA' */
+  transform: translate(0, 0);
+}
