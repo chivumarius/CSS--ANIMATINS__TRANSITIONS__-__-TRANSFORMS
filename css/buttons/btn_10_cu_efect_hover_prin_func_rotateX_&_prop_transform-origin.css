@@ -1,0 +1,98 @@
+/* SELECTORUL 'BODY' */
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #212121;
+}
+
+/* SELECTORUL 'A' */
+a {
+  padding: 20px 40px;
+
+  /* TRANSF. CARACTERELOR IN LITERE MARI */
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  background-color: #f1c40f;
+  color: white;
+
+  font-size: 20px;
+
+  /* DISTANTA DINTRE LITERE */
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* PSEUDO-SELECTORUL ':BEFORE' (INAINTEA ELEM. 'A') */
+a:before {
+  content: "BUTON";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: #2ecc71;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* TRANSFORMAREA PRIN FUNC. DE 'ROTIRE' 
+     A ELEM. PE AXA 'X'   */
+  transform: rotateX(270deg);
+
+  /* SCHIMBAM ORIGINEA FUNC. 'ROTATE()' 
+     (DEFAULT = 'CENTRU')  */
+  transform-origin: top;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* PSEUDO-SELECTORUL ':AFTER' (DUPA ELEM. 'A') */
+a:after {
+  content: "BUTTON";
+
+  /* FLEX */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* SCHIMBAM ORIGINEA FUNC. 'ROTATE()' 
+     (DEFAULT = 'CENTRU')  */
+  /* transform-origin: top; */
+  transform-origin: bottom;
+
+  /* TRANSFORMAREA PRIN FUNC. DE 'ROTIRE' 
+     A ELEM. PE AXA 'X'   */
+  transform: rotateX(270deg);
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+
+  /* INTARZIEREA (DELAY-UL) ELEMEN. 'AFTER' */
+  transition-delay: 0.25s;
+}
+
+/* HOVER - PSEUDO-SELECTORI */
+a:hover:before,
+a:hover:after {
+  /* ROTIREA LA POZITIA INITIALA */
+  transform: rotateX(0deg);
+}
