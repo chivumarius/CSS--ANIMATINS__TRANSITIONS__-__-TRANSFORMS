@@ -1,0 +1,77 @@
+/* SELECTORUL 'BODY' */
+body {
+  height: 100vh;
+
+  /* AFISARE 'FLEX' */
+  display: flex;
+
+  /* ALINIEREA PT. 'FLEX' */
+  justify-content: center;
+  align-items: center;
+
+  background-color: #222;
+}
+
+/* SELECTORUL 'A' (PT. STILIZAREA BUTONULUI) */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid #fff;
+  padding: 40px 80px;
+  position: relative;
+
+  /* DURATA SCHIMBARILOR */
+  transition: all 1s;
+
+  /* ASCUNDEM SUPRAPUNEREA PSEUDO-ELEM. 'A:BEFORE' */
+  overflow: hidden;
+}
+
+/* HOVER - SELECTORUL 'A'  */
+a:hover {
+  color: white;
+}
+
+/* PSEUDO-SELECTORUL 'A:BEFORE' (PT. ADG. DE CONTINUT - IN FATA ELEM. 'A') */
+a:before {
+  /* ADAUGAM TEXT - CE VA APAREA PESTE 'BEFORE' PRIN HOVER */
+  content: "DA!";
+
+  color: white;
+
+  /* ACTIVARE 'FLEX' */
+  display: flex;
+
+  /* ALINIERE PT. 'FLEX' */
+  align-items: center;
+  justify-content: center;
+
+  /* POZITIONAREA 'PUNCTULUI' */
+  position: absolute;
+
+  /* ORIZONTALA: STAMGA  */
+  left: 0;
+
+  /* VERTICALA: SUS  */
+  top: 0;
+
+  /* CONF. PSEUDO-ELEM. 'BEFORE' */
+  height: 100%;
+  width: 100%;
+  background-color: #f44336;
+
+  /* EFECTUL DE TRANSF. PRIN FUNCT. TRANSLATEY(-Y%) 
+     (PT. A MUTA ELEM. DE 'SUS IN JOS') */
+  transform: translateY(-100%);
+
+  /* DURATA DE TIMP A TRANSFORMARI */
+  transition: 0.5s;
+}
+
+/* HOVER - PSEUDO-SELECTORUL 'A:BEFORE' */
+a:hover:before {
+  /* POZITIA - EFECTUL DE TRANSF. PRIN FUNCT. TRANSLATEY(0)  */
+  transform: translateY(0);
+}
