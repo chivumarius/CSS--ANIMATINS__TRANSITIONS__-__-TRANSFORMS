@@ -1,0 +1,115 @@
+/* ========================================
+  SELEC. 'BODY'
+===========================================*/
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: sans-serif;
+
+  /* ASCUNDEREA SUPRAPUNERI */
+  overflow: hidden;
+}
+
+/* ========================================
+  SELEC. 'A'
+===========================================*/
+a {
+  text-decoration: none;
+
+  width: 160px;
+  height: 60px;
+
+  color: black;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+
+  position: relative;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.2s;
+}
+
+/* ========================================
+  HOVER - 'A'
+===========================================*/
+a:hover {
+  color: white;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':BEFORE'
+  (PT. CREAREA 'FUNDALULUI' CE SE 'ROTESTE')
+===========================================*/
+a:before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  /* PLASAREA 'LAYER'-ULUI IN SPATELE 'TEXTULUI' */
+  z-index: -1;
+
+  /* INVIZIBILITATEA ELEM. ':BEFORE' */
+  opacity: 0;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.8s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELEC. ':BEFORE'
+===========================================*/
+a:hover:before {
+  /* FIZIBILITATE COMPLETA */
+  opacity: 1;
+
+  /* ROTIREA ELEM. */
+  transform: rotate(15deg);
+}
+
+/* ========================================
+  SELEC. 'SPAN' DIN ELEM. 'A'
+===========================================*/
+a span {
+  color: transparent;
+  position: relative;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':BEFORE' 
+  DIN 'SPAN' DIN ELEM. 'A'
+===========================================*/
+a span:before {
+  /* AFISARE TEXT */
+  content: "B";
+
+  position: absolute;
+  color: black;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.2s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELEC. ':BEFORE' 
+  DIN 'SPAN' DIN ELEM. 'A'
+===========================================*/
+a:hover span:before {
+  color: white;
+  font-size: 80px;
+
+  /*  */
+  transform: translate(-65%, -10%) rotate(360deg);
+}
