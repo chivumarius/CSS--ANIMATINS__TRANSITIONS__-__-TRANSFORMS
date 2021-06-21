@@ -1,0 +1,143 @@
+/* ======================================== */
+body {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: verdana;
+}
+
+/* ======================================== 
+      (0) SELECTORUL 'A'
+        (PT. STILIZARE 'BUTON')
+   ======================================== */
+a {
+  /* FUNDAL 'TRANSPARENT' */
+  background-color: transparent;
+  color: white;
+
+  font-weight: bold;
+
+  height: 60px;
+  width: 300px;
+
+  letter-spacing: 2px;
+  line-height: 60px;
+
+  position: relative;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.2s;
+}
+
+/* ======================================== 
+      (1) PSEUDO-SELECTORUL ':BEFORE'
+        (PT. CREAREA 'FUNDALULUI 1')
+   ======================================== */
+a:before {
+  content: "";
+
+  /* POZITIONAREA ELEM. ':BEFORE' */
+  position: absolute;
+
+  /* MUTAM ELEM. = MAI 'SUS' FATA DE PARTEA 'SUPERIOARA' */
+  top: -3px;
+
+  /* MUTAM ELEM. = MAI IN 'STANGA' FATA DE PARTEA 'STANGA' */
+  left: -3px;
+
+  width: 100%;
+  height: 100%;
+
+  /* FUNDALUL - ELEM. 'BEFORE'  */
+  background-color: #20caff;
+
+  /* POZ. LAYOUT-ULUI  (IN SPATELE TEXTULUI) */
+  z-index: -1;
+
+  /* PROP. 'MIX-BLEND-MODE' 
+  (MODUL DE 'AMESTECARE' A 'CULORILOR' ELEM. 'PARINTE' & 'COPIL') */
+  /* VAL. 'MULTIPLY' - RETURNEAZA CULOAREA 'INTUNECATA'  */
+  mix-blend-mode: multiply;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.2s;
+
+  /* MUTAM 'ORIGINEA' - 'ROTATIEI' ELEM. ':BEFORE'- 'SUS' (DEFAULT = 'CENTER') */
+  transform-origin: top;
+}
+
+/* HOVER - ':BEFORE' */
+a:hover:before {
+  /* MUTAM ELEM. = SI MAI MULT IN 'SUS' FATA DE PARTEA 'SUPERIOARA' */
+  top: -6px;
+
+  /* ADUCEM ELEM. = MAI IN 'DREAPTA' FATA DE PARTEA 'STANGA' */
+  left: 0;
+
+  /* SCHIMB. PRIN FUNC. 'PERSPECTIVE' (PT. 3D) 
+        & FUNC. ROTATEX() */
+  transform: perspective(1000px) rotateX(75deg);
+}
+
+/* ======================================== 
+      (2) PSEUDO-SELECTORUL ':AFTER'
+        (PT. CREAREA 'FUNDALULUI 2')
+   ======================================== */
+a:after {
+  content: "";
+
+  /* POZITIONAREA ELEM. ':AFTER' */
+  position: absolute;
+
+  /* MUTAM ELEM. = MAI 'JOS' FATA DE PARTEA 'SUPERIOARA' */
+  top: 3px;
+
+  /* MUTAM ELEM. = MAI IN 'DREAPTA' FATA DE PARTEA 'STANGA' */
+  left: 3px;
+
+  width: 100%;
+  height: 100%;
+
+  /* FUNDALUL - ELEM. 'AFTER'  */
+  background-color: #ff7675;
+
+  z-index: -1;
+
+  /* PROP. 'MIX-BLEND-MODE' 
+  (MODUL DE 'AMESTECARE' A 'CULORILOR' ELEM. 'PARINTE' & 'COPIL') */
+  /* VAL. 'MULTIPLY' - RETURNEAZA CULOAREA 'INTUNECATA'  */
+  mix-blend-mode: multiply;
+
+  /* POZ. LAYOUT-ULUI  (IN SPATELE TEXTULUI) */
+  transition: all 0.2s;
+
+  /* MUTAM 'ORIGINII' - 'ROTATIEI' ELEM. ':AFTER' - 'JOS' (DEFAULT = 'CENTER') */
+  transform-origin: bottom;
+}
+
+/* HOVER - ':AFTER' */
+a:hover:after {
+  /* MUTAM ELEM. = SI MAI 'JOS' FATA DE PARTEA 'SUPERIOARA' */
+  top: 6px;
+
+  /* ADUCEM ELEM. = MAI IN 'DREAPTA' FATA DE PARTEA 'STANGA' */
+  left: 0;
+
+  /* SCHIMB. PRIN FUNC. 'PERSPECTIVE' (PT. 3D) 
+        & FUNC. ROTATEX() */
+  transform: perspective(1000px) rotateX(-75deg);
+}
+
+/* HOVER -'A' */
+a:hover {
+  /* CULOARE FONT */
+  color: #272727;
+}
