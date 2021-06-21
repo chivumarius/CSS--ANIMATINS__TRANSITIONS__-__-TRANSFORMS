@@ -1,0 +1,132 @@
+/* ========================================
+  SELEC. 'BODY'
+===========================================*/
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+
+  background-color: #272727;
+}
+
+/* ========================================
+  SELEC. 'A'
+===========================================*/
+a {
+  text-decoration: none;
+  padding: 15px 30px;
+  color: #00aeff;
+  font-size: 18px;
+
+  letter-spacing: 3px;
+
+  /* BORDER BUTON */
+  border: 2px solid #00aeff;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  position: relative;
+
+  /* ASCUNDEREA 'SUPRAPUNERILOR' */
+  overflow: hidden;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ========================================
+  HOVER - SELEC. 'A'
+===========================================*/
+a:hover {
+  color: white;
+}
+
+/* ========================================
+  CLASA. 'WAVE'
+===========================================*/
+.wave {
+  /* DIMENSIUNI (CAT BUTONUL) */
+  width: 100%;
+  height: 100%;
+
+  /* POZITIONARE */
+  position: absolute;
+
+  /* POZITIONAT IN STANGA  */
+  left: 0;
+
+  /* FUBC. 'CALC(% + PX)' */
+  /* PT A MUTA AMBELE PSEUDO-ELEM. JOS SUB BUTON */
+  top: calc(100% + 22px);
+
+  /* FUNDAL (ALBASTRU DESCHIS) */
+  background-color: #00aeff;
+
+  /* PLASAREA 'LAYOUT'-ULUI (SUB TEXT) */
+  z-index: -1;
+
+  /* DURATA SCHIMBARI */
+  transition: all 1s;
+}
+
+/* ========================================
+  HOVER - CLASA. 'WAVE'
+===========================================*/
+a:hover .wave {
+  /* POZITIONARE PE BUTON */
+  top: 0;
+}
+
+/* ========================================
+  PSEUDO-CLASA. 'WAVE:BEFORE'
+   (PT. INCARCAREA 'IMAGINII CU VALURI' (WAVE)) 
+===========================================*/
+.wave:before {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+
+  /* SUB BUTON - DEASUPRA CLS. 'WAVE' */
+  top: -22px;
+
+  /* IN DREAPTA  */
+  left: 0;
+
+  /* LATIMEA IDENTICA CU A BUTONULUI */
+  width: 100%;
+
+  /* INALTIMEA 'VALURILOR' */
+  height: 22px;
+
+  /* IMAGINE DE FUNDAL (VALURI) */
+  background: url(../../imgs/wave.png);
+
+  /* PROP. 'ANIMATION' 
+  (IN CARE INCARCAM '@KEYFRAME WAVY') */
+  /* VALOARE = 'NUME KEYFRAME', 'VITEZA', 'TIP EFECT', 'REPETAREA' */
+  animation: wavy 0.5s linear infinite;
+}
+
+/* ========================================
+   VADRUL CHEIE 'WAVY'
+   (IN CARE CREAM 'ANIMATIA WAVY') 
+===========================================*/
+@keyframes wavy {
+  /* POZITIA INITIALA */
+  0% {
+    background-position-x: 0;
+  }
+
+  /* POZITIA LA FINAL (ESTE LATIMEEA IMAGINII 'WAVE') */
+  100% {
+    background-position-x: 118px;
+  }
+}
