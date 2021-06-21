@@ -1,0 +1,165 @@
+/* ========================================
+  SELEC. 'BODY'
+===========================================*/
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #272727;
+}
+
+/* ========================================
+  SELEC. 'BUTTON'
+===========================================*/
+button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  width: 400px;
+  height: 120px;
+  text-transform: uppercase;
+  line-height: 120px;
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  letter-spacing: 15px;
+  overflow: hidden;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':BEFORE' DIN 'BUTTON'
+  (PT. CREAREA 'LINIEI' DE 'SUS')
+===========================================*/
+button:before {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+
+  /* LA PARTEA 'SUPERIOARA' A BUTONULUI */
+  top: 0;
+
+  /* IN 'STANGA' IN 'AFARA BUTONULUI' */
+  left: -100%;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 4px;
+
+  background-color: white;
+
+  /* DURATA SCHIMBARI (5 MS) */
+  transition: all 0.5s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELEC. ':BEFORE' DIN 'BUTTON'
+===========================================*/
+button:hover:before {
+  /* POZITIONARE PE BUTON (SUS) */
+  left: 0;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':AFTER' DIN 'BUTTON'
+  (PT. CREAREA 'LINIEI' DE 'JOS')
+===========================================*/
+button:after {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+
+  /* LA PARTEA INFERIOARA A BUTONULUI */
+  bottom: 0;
+
+  /* IN 'DREAPTA' IN 'AFARA BUTONULUI' */
+  right: -100%;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 4px;
+
+  background-color: white;
+
+  /* DURATA SCHIMBARI (5 MS) */
+  transition: all 0.5s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELEC. ':AFTER' DIN 'BUTTON'
+===========================================*/
+button:hover:after {
+  /* POZITIONARE PE BUTON (JOS) */
+  right: 0;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':BEFORE' DIN 'SPAN'
+  (PT. CREAREA 'LINIEI' DIN 'DREAPTA')
+===========================================*/
+span:before {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+
+  /* IN 'AFARA' PARTII 'SUPERIOARE' A BUTONULUI */
+  top: -100%;
+
+  /* IN DREAPTA BUTONULUI */
+  right: 0;
+
+  /* DIMENSIUNI */
+  width: 4px;
+  height: 100%;
+  background-color: white;
+
+  /* DURATA SCHIMBARI (5 MS) */
+  transition: all 0.5s;
+}
+
+/* ========================================
+  HOVER PSEUDO-SELEC. ':BEFORE' DIN 'SPAN'
+===========================================*/
+button:hover span:before {
+  /* POZITIONARE PE BUTON (IN DREAPTA) */
+  top: 0;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':AFTER' DIN 'SPAN'
+  (PT. CREAREA 'LINIEI' DIN 'STANGA')
+===========================================*/
+span:after {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+
+  /* IN 'AFARA' PARTII 'INFERIOARE' A BUTONULUI */
+  bottom: -100%;
+
+  /* IN 'STANGA' BUTONULUI */
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 4px;
+  height: 100%;
+
+  background-color: white;
+
+  /* DURATA SCHIMBARI (5 MS) */
+  transition: all 0.5s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELEC. ':AFTER' DIN 'SPAN'
+===========================================*/
+button:hover span:after {
+  /* POZITIONARE PE BUTON (IN STANGA) */
+  bottom: 0;
+}
