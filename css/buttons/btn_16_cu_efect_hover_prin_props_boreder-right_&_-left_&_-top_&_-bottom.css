@@ -1,0 +1,102 @@
+/* iMPORT 'GOOGLE FONTS' */
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+
+/* ========================================
+  SELEC. 'BODY'
+===========================================*/
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #272727;
+}
+
+/* ========================================
+  SELEC. 'BUTTON'
+===========================================*/
+button {
+  border: none;
+
+  padding: 12px 40px;
+  background-color: #c47135;
+  color: white;
+
+  font-family: "BenchNine";
+  font-size: 22px;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* STIL CURSOR 'HAND' */
+  cursor: pointer;
+  position: relative;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':BEFORE'
+  (PT. CREARE 'BORDER-TOP' & 'BORDER-LEFT')
+===========================================*/
+button:before {
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+
+  /* DEASUPRA BUTONULUI */
+  top: -5px;
+
+  /* IN STANGA IN AFARA BUTONULUI */
+  left: -5px;
+
+  /* BORDER 'SUS' */
+  border-top: 2px solid #c47135;
+
+  /* BORDER IN 'STANGA' */
+  border-left: 2px solid #c47135;
+
+  /* DURATA SCHIMBARII */
+  transition: all 0.25s;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':AFTER'
+  (PT. CREARE 'BORDER-BOTTOM' & 'BORDER-RIGHT')
+===========================================*/
+button:after {
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+
+  /* JOS - SUN BUTON */
+  bottom: -5px;
+
+  /* IN DREAPTA - IN AFARA BUTONULUI */
+  right: -5px;
+
+  /* BORDER 'JOS' */
+  border-bottom: 2px solid #c47135;
+
+  /* BORDER IN 'DREAPTA' */
+  border-right: 2px solid #c47135;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.25s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELECTOARE
+===========================================*/
+button:hover:before,
+button:hover:after {
+  height: 100%;
+  width: 100%;
+}
