@@ -1,0 +1,105 @@
+/* ================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background-color: #212121;
+}
+
+/* ================================= */
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 22px;
+  font-family: verdana;
+
+  letter-spacing: 3px;
+
+  /* INALTIME 'BUTON' */
+  height: 60px;
+
+  /* LATIME 'BUTON' */
+  width: 200px;
+
+  line-height: 60px;
+  text-align: center;
+  color: #fdc518;
+
+  position: relative;
+}
+
+/* ============================================ 
+ (1) PSEODO-ELEM. 'BEFORE'       
+ (PT. CREARE 'BORDER-LEFT' & 'BORDER-RIGHT')
+ ============================================= */
+a:before {
+  content: "";
+
+  /* INALTIME ELEM. ':BEFORE' (MAI 'INALT' DECAT 'BUTONUL') */
+  height: 90px;
+
+  /* LATIME ELEM. ':BEFORE' (LAFEL CA BUTONUL) */
+  width: 200px;
+
+  position: absolute;
+
+  /* DEASUPRA BUTONULUI */
+  top: -15px;
+  left: 0;
+
+  /* 'BORDER'-UL DIN 'STANGA' ('ROSU') */
+  border-left: 2px solid red;
+
+  /* 'BORDER'-UL DIN 'DREAPTA' ('GALBEN') */
+  border-right: 2px solid #fdc518;
+
+  /* DURATA SCHIMBARI */
+  transition: all 01s;
+}
+
+/* ================================= */
+a:hover:before {
+  /* SCHIMBAREA PRIN ROTIREA PE AXA 'Y' (A ELEM. 'BEFORE') */
+  transform: rotateY(180deg);
+}
+
+/* ============================================ 
+ (2) PSEODO-ELEM. 'AFTER'       
+ (PT. CREARE 'BORDER-TOP' & 'BORDER-BOTTOM')
+ ============================================= */
+a:after {
+  content: "";
+
+  /* INALTIME ELEM. ':AFTER' (LAFEL CA BUTONUL) */
+  height: 60px;
+
+  /* LATIME ELEM. ':AFTER' (MAI 'LAT' DECAT 'BUTONUL') */
+  width: 230px;
+
+  position: absolute;
+  top: 0;
+
+  /* IN AFARA BUTONULUI */
+  left: -15px;
+
+  /* 'BORDER'-UL DE 'SUS' ('ROSU') */
+  border-top: 2px solid red;
+
+  /* 'BORDER'-UL DE 'JOS' ('GALBEN') */
+  border-bottom: 2px solid #fdc518;
+
+  /* DURATA SCHIMBARI */
+  transition: all 1s;
+}
+
+/* ================================= */
+a:hover:after {
+  /* SCHIMBAREA PRIN ROTIREA PE AXA 'X' (A ELEM. 'AFTER') */
+  transform: rotateX(180deg);
+}
