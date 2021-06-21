@@ -1,0 +1,151 @@
+/* SELECTORUL 'BODY' */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background-color: #222;
+}
+
+/* ______________________________ */
+/* SELECTORUL - 'A' */
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 25px;
+  font-family: verdana;
+  color: #f6b93b;
+
+  letter-spacing: 3px;
+  padding: 25px 50px;
+  position: relative;
+  border: 3px solid #f6b93b;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.2s;
+
+  /* ASCUNDERE 'PSEUDO-ELEMENTE' */
+  overflow: hidden;
+}
+
+/* ______________________________ */
+/* TOATE 'PSEUDO-SELECTOARELE' */
+a:before,
+a:after,
+span:before,
+span:after {
+  content: "";
+
+  position: absolute;
+
+  /* FIECARE PSEUDO-ELEM. VA AVEA 1/4 DIN LATIMEA BUTONULUI */
+  width: 25%;
+  height: 100%;
+  background-color: #f6b93b;
+
+  /* POZITIONAREA PE 'LAYOUT' (IN SPATELE TEXTULUI) */
+  z-index: -1;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.1s;
+}
+
+/* PSEUDO-SELECTORUL 'BEFORE' (INAINTE DE ELEM) */
+a:before {
+  /* POZITIONAT - SUB BUTON */
+  top: 100%;
+
+  /* POZITIONAT - IN 'STANGA' */
+  left: 0%;
+}
+
+/* ______________________________ */
+/* HOVER - PSEUDO-SELECTORUL 'BEFORE'  */
+a:hover:before {
+  /* POZITIONAT - IN BUTON */
+  top: 0;
+
+  /* POZITIONAT - IN 'STANGA' */
+  left: 0;
+}
+
+/* ______________________________ */
+/* PSEUDO-SELECTORUL 'AFTER' (DUPA ELEM) */
+a:after {
+  /* POZITIONAT - DEASUPRA BUTONULUI */
+  top: -100%;
+
+  /* POZITIONAT - IN 'DREAPTA' */
+  right: 0;
+
+  /* INTARZIERE - '3 MS' */
+  transition-delay: 0.3s;
+}
+
+/* ______________________________ */
+/* HOVER - PSEUDO-SELECTORUL 'AFTER' */
+a:hover:after {
+  /* POZITIONAT - IN BUTON */
+  top: 0;
+
+  /* POZITIONAT - IN DREAPTA  */
+  right: 0;
+}
+
+/* ______________________________ */
+/* PSEUDO-SELECTORUL 'SPAN:BEFORE'- IN 'A' */
+a span:before {
+  /* POZITIONAT - DEASUPRA BUTONULUI */
+  top: -100%;
+
+  /* POZITIONAT - IN 'MIJLOC - STANGA'  */
+  left: 25%;
+
+  /* INTARZIERE -'1 MS' */
+  transition-delay: 0.1s;
+}
+
+/* ______________________________ */
+/* PSEUDO-SELECTORUL 'SPAN:BEFORE'- IN HOVER - 'A' */
+a:hover span:before {
+  /* POZITIONAT - IN BUTON */
+  top: 0;
+
+  /* POZITIONAT - IN 'MIJLOC - STANGA'  */
+  left: 25%;
+}
+
+/* ______________________________ */
+/* PSEUDO-SELECTORUL 'SPAN:AFTER'- IN 'A' */
+a span:after {
+  /* POZITIONAT - SUB BUTON */
+  bottom: -100%;
+
+  /* POZITIONAT - IN 'MIJLOC - DREAPTA'  */
+  right: 25%;
+
+  /* INTARZIERE - '2 MS' */
+  transition-delay: 0.2s;
+}
+
+/* ______________________________ */
+/* PSEUDO-SELECTORUL 'SPAN:AFTER'- IN HOVER - 'A' */
+a:hover span:after {
+  /* POZITIONAT IN BUTON */
+  bottom: 0;
+
+  /* POZITIONAT - IN 'MIJLOC - DREAPTA' */
+  right: 25%;
+}
+
+/* ______________________________ */
+/* HOVER - 'A' */
+a:hover {
+  /* CULOARE TEXT */
+  color: #222;
+}
