@@ -53,13 +53,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* CULOARE TEXT */
   color: white;
 
-  /* ASCUNDEREA CLASEI */
-  opacity: 0;
+  /* EFECTE 'SLIDE-IN' */
+  /* POZITIONAREA IN 'STANGA IMG' (PE AXA 'X') */
+  /* transform: translateX(-100%); */
 
-  /* FUNDAL 'INVIZIBIL' */
-  background-color: rgba(0, 0, 0, 0);
+  /* POZITIONAREA IN 'DREAPTA IMG' (PE AXA 'X') */
+  /* transform: translateX(100%); */
+
+  /* POZITIONAREA 'SUB IMG' (PE AXA 'Y') */
+  /* transform: translateY(100%); */
+
+  /* POZITIONAREA 'DEASUPRA IMG' (PE AXA 'Y') */
+  transform: translateY(-100%);
 
   /* DURATA SCHIMBARI */
   transition: 0.5s;
@@ -86,19 +95,25 @@ body {
 
 /* ===================================================
  CLS. 'CAPTION' -- LA HOVER - PESTE CLS. 'CONTAINER'
+  ( PT. CREAREA & MODIFICAREA  EFECTELOR)
 ====================================================== */
 .container:hover .caption {
-  /* VIZIBILITATE COMPLETA */
-  opacity: 1;
-
   /* FUNDAL CU OPACITATE LA JUMATATE */
   background-color: rgba(0, 0, 0, 0.5);
+
+  /* EFECTE 'SLIDE-IN' */
+  /* POZITIONAREA 'PESTE IMG' (PE AXA 'X') */
+  /* transform: translateX(0); */
+
+  /* POZITIONAREA 'PESTE IMG' (PE AXA 'Y') */
+  transform: translateY(0);
 }
 
 /* ===================================================
  ELEM. 'IMG' -- LA HOVER - PESTE CLS. 'CONTAINER'
+   ( PT. CREAREA & MODIFICAREA  EFECTELOR)
 ====================================================== */
 .container:hover img {
-  /* MARIREA 'IMG' & ROTIREA 'IMG'  LA HOVER */
-  transform: scale(1.3) rotate(15deg);
+  /* MARIREA 'IMG' & ROTIREA 'IMG' (CONTRAR ACELOR DE CEASORNIC)  LA HOVER */
+  transform: scale(1.3) rotate(-15deg);
 }
