@@ -1,0 +1,120 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: sans-serif;
+  background-color: #fffa65;
+}
+
+/* ==============================================
+  ELEM. 'UL'
+================================================= */
+ul {
+  padding: 0;
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ==============================================
+  ELEM. 'LI' -- DIN  ELEM. 'UL'
+================================================= */
+ul li {
+  /* DEZACTI STIL */
+  list-style: none;
+}
+
+/* ==============================================
+  ELEM. 'A' -- DIN  ELEM. 'LI' -- DIN  ELEM. 'UL' 
+================================================= */
+ul li a {
+  position: relative;
+
+  /* AFISARE ELEM. IN BLOC */
+  display: block;
+  text-decoration: none;
+  color: #3d3d3d;
+  font-size: 22px;
+  padding: 10px 15px;
+}
+
+/* ==============================================
+  PSEUDO-ELEM. ':BEFORE' - DIN 'A' - DIN 'LI' - DIN 'UL' 
+            (PT. LINIA 'SUPERIOARA')
+================================================= */
+ul li a:before {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  /* SUS */
+  top: 0;
+  /* STANGA */
+  left: 0;
+
+  /* DIMENSIUNIILE 'LINIEI' */
+  width: 100%;
+  height: 2px;
+
+  /* FUNDAL */
+  background-color: #3d3d3d;
+
+  /* INVIZIBIL (PRIN MICSORARE PE AXA 'X') */
+  transform: scaleX(0);
+
+  /* SCHIMBARE 'ORIGINEI' IN 'STANGA' (DEFAULT - 'CENTER') */
+  transform-origin: left;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  PSEUDO-ELEM. ':AFTER' - DIN 'A' - DIN 'LI' - DIN 'UL' 
+            (PT. LINIA 'INFERIOARA')
+================================================= */
+ul li a:after {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  /* JOS */
+  bottom: 0;
+
+  /* STANGA */
+  left: 0;
+
+  /* DIMENSIUNIILE 'LINIEI' */
+  width: 100%;
+  height: 2px;
+
+  /* FUNDAL */
+  background-color: #3d3d3d;
+
+  /* INVIZIBIL (PRIN MICSORARE PE AXA 'X') */
+  transform: scaleX(0);
+
+  /* SCHIMBARE 'ORIGINEI' IN 'DREAPTA' (DEFAULT - 'CENTER') */
+  transform-origin: right;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  HOVER -PSEUDO-ELEM. ':BEFORE' & ':AFTER' 
+================================================= */
+ul li a:hover:before,
+ul li a:hover:after {
+  /* REDIMENSIONARE LA 'SCARA INTREAGA' */
+  transform: scaleX(1);
+}
