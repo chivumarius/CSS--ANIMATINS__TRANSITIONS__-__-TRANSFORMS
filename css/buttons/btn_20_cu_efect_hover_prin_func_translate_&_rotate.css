@@ -1,0 +1,115 @@
+/* ========================================
+  SELEC. '*' (TOATE)
+===========================================*/
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+  SELEC. 'BODY'
+===========================================*/
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: sans-serif;
+  /* ASCUNDERE 'SUPRAPUNERI' */
+  overflow: hidden;
+}
+
+/* ========================================
+  SELEC. 'A'
+===========================================*/
+a {
+  position: relative;
+  text-decoration: none;
+
+  /* DIMENSIUNI */
+  width: 160px;
+  height: 60px;
+
+  color: black;
+  line-height: 60px;
+
+  /* ALINIERE */
+  text-align: center;
+
+  /* CAPITALIZARE (PRIMA LITERA MARE) */
+  text-transform: capitalize;
+  font-size: 25px;
+
+  /* DURATA 'SCHIMBARI' */
+  transition: all 0.2s;
+
+  /* ASVUNDERE SUPRAPUNERI */
+  overflow: hidden;
+}
+
+/* ========================================
+  SELEC. 'SPAN' DIN ELEM. 'A'
+===========================================*/
+a span {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+
+  /* BORDER */
+  border: 2px solid black;
+
+  /* PLASAREA 'LAYOUT' IN 'SPATELE TEXTULUI' */
+  z-index: -1;
+}
+
+/* ========================================
+  PSEUDO-SELEC. ':BEFORE' DIN ELEM. 'SPAN'
+===========================================*/
+span:before {
+  content: "";
+
+  /* DIMENSIUNI */
+  width: 8%;
+  height: 500%;
+
+  /* CULOARE FUNDAL 'BEFORE' */
+  background-color: white;
+
+  /* POZITIONARE (CENTRATA) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* MUTAREA (-X, -Y) & ROTAREA (-DEG) */
+  transform: translate(-50%, -50%) rotate(-60deg);
+
+  /* DURATA SCHIMBARII */
+  transition: all 0.2s;
+}
+
+/* ========================================
+  HOVER - PSEUDO-SELEC. ':BEFORE' DIN ELEM. 'SPAN' DIN 'A'
+===========================================*/
+a:hover span:before {
+  /* LATIME COMPLETA */
+  width: 100%;
+  background-color: black;
+
+  /* MUTAREA (-X, -Y) & ROTAREA (DEG) */
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+/* ========================================
+ HOVER - 'A'
+===========================================*/
+a:hover {
+  color: white;
+}
