@@ -1,0 +1,128 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==============================================
+  CLS. 'CONTAINER'
+================================================= */
+.container {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 500px;
+  height: 500px;
+
+  /* ASCUNDEREA 'SUPRAPUNERILOR' */
+  overflow: hidden;
+}
+
+/* ==============================================
+  ELEM. 'IMG' -- DIN  CLS. 'CONTAINER'
+================================================= */
+.container img {
+  width: 100%;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  CLS. 'CAPTION'
+================================================= */
+.caption {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUN (CAT 'CONTAINER'-UL) */
+  height: 100%;
+  width: 100%;
+
+  /* FLEX */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* CULOARE TEXT */
+  color: white;
+
+  /* FUNDAL 'NEGRU' */
+  background-color: black;
+
+  /* EFECT 'FADE-IN' */
+  /* POZITIONAREA 'STANGA IMG' (PE AXA 'X') */
+  /* transform: translateX(-100%); */
+
+  /* POZITIONAREA 'DREAPTA IMG' (PE AXA 'X') */
+  /* transform: translateX(100%); */
+
+  /* POZITIONAREA 'SUB IMG' (PE AXA 'Y') */
+  /* transform: translateY(100%); */
+
+  /* POZITIONAREA 'DEASUPRA IMG' (PE AXA 'Y') */
+  transform: translateY(-100%);
+
+  /* DURATA SCHIMBARI */
+  transition: 0.5s;
+}
+
+/* ==============================================
+  ELEM. 'H1' -- DIN CLS. 'CAPTION'
+================================================= */
+.caption h1 {
+  /* TRANSF. CARACTERE IN 'LITERE MARI' */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ==============================================
+  ELEM. 'P' -- DIN CLS. 'CAPTION'
+================================================= */
+.caption p {
+  font-size: 18px;
+
+  /* CPITALIZAREA CUVINTELOR */
+  text-transform: capitalize;
+}
+
+/* ===================================================
+ CLS. 'CAPTION' -- LA HOVER - PESTE CLS. 'CONTAINER'
+  ( PT. CREAREA & MODIFICAREA  EFECTELOR)
+====================================================== */
+.container:hover .caption {
+  /* EFECTE 'FADE-IN' */
+  /* MUTARE 'FUNDAL' IN 'LOCUL IMG' (PE AXA 'X') */
+  /* transform: translateX(0); */
+
+  /* MUTARE 'FUNDAL' IN 'LOCUL IMG' (PE AXA 'Y') */
+  transform: translateY(0);
+}
+
+/* ===================================================
+ ELEM. 'IMG' -- LA HOVER - PESTE CLS. 'CONTAINER'
+   ( PT. CREAREA & MODIFICAREA  EFECTELOR)
+====================================================== */
+.container:hover img {
+  /* MUTAREA 'IMG' IN 'DREAPTA' (PE AXA 'X') */
+  /* transform: translateX(100%); */
+
+  /* MUTAREA 'IMG' IN 'STANGA' (PE AXA 'X') */
+  /* transform: translateX(-100%); */
+
+  /* MUTAREA 'IMG' IN PARTEA DE 'SUS' (PE AXA 'Y') */
+  /* transform: translateY(-100%); */
+
+  /* MUTAREA 'IMG' IN PARTEA DE 'JOS' (PE AXA 'Y') */
+  transform: translateY(100%);
+}
