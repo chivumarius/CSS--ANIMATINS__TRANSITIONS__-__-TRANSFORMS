@@ -1,0 +1,48 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #4b4b4b;
+}
+
+/* ==============================================
+  ELEM. 'DIV'
+================================================= */
+div {
+  /* DIMENSIUNI */
+  width: 300px;
+  height: 400px;
+
+  /* BORDER */
+  border: 5px solid white;
+
+  /* ASCUNDERE 'SUPRAPUNERI' */
+  overflow: hidden;
+}
+
+/* ==============================================
+  ELEM. 'IMG'
+================================================= */
+img {
+  /* DIMENSIUNI (CAT ELEM. 'DIV') */
+  width: 100%;
+  height: 100%;
+
+  /* DURATA SCHIMBARI */
+  transition: transform 1s;
+}
+
+/* ==============================================
+  HOVER - ELEM. 'IMG'
+================================================= */
+img:hover {
+  /* MARIREA & RORIREA 'IMG' */
+  transform: scale(1.2) rotate(9deg);
+}
