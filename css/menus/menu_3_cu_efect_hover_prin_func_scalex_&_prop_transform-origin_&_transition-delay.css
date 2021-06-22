@@ -1,0 +1,153 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ==============================================
+  ELEM. 'UL'
+================================================= */
+ul {
+  margin: 0;
+  padding: 0;
+
+  /* FLEX */
+  display: flex;
+  list-style-type: none;
+}
+
+/* ==============================================
+  ELEM. 'A' - DIN 'LI' - DIN 'UL'
+================================================= */
+ul li a {
+  /* ELEMENT BLOC */
+  display: block;
+  width: 120px;
+  height: 40px;
+
+  line-height: 40px;
+  text-align: center;
+
+  color: red;
+
+  /* CAPITALIZARE */
+  text-transform: capitalize;
+  text-decoration: none;
+
+  position: relative;
+  color: #262626;
+
+  /* DURATA SCHIMBARE */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  HOVER - ELEM. 'A' 
+================================================= */
+a:hover {
+  color: white;
+}
+
+/* ==============================================
+ (1) ELEM. 'SPAN' (1) - DIN 'LI' - DIN 'UL'
+================================================= */
+ul li span {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  /* LATIME 'SFERT' */
+  /* width: 25%; */
+
+  /* LATIME COMPLETA */
+  width: 100%;
+
+  /* INALTIME COMPLETA */
+  /* height: 100%; */
+
+  /* INALTIME 'SFERT' */
+  height: 25%;
+
+  /* FUNDAL */
+  background-color: #262626;
+
+  /* PLASARE 'LAYOUT' SUB 'TEXT' */
+  z-index: -1;
+
+  /* INVIZIBIL (PRIN MICSORARE) */
+  /* transform: scaleY(0); */
+
+  /* INVIZIBIL (PRIN MICSORARE) */
+  transform: scaleX(0);
+
+  /* REPOZITIONARE ORIGINE - IN 'SUS'*/
+  /* transform-origin: top; */
+
+  /* REPOZITIONARE ORIGINE - IN 'STANGA'*/
+  transform-origin: left;
+
+  /* DURATA SCHIMBARE */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  ELEM. 'SPAN' - HOVER 'A'
+================================================= */
+a:hover span {
+  /* VIZIBI;ITATE COMPLETA */
+  /* transform: scaleY(1); */
+
+  /* VIZIBI;ITATE COMPLETA */
+  transform: scaleX(1);
+}
+
+/* ==============================================
+   (2) PSEUDO-ELEM. 'SPAN:NTH-CHILD(2)' 
+================================================= */
+span:nth-child(2) {
+  /* LA SFERT (DIN 'STANGA') */
+  /* left: 25%; */
+
+  /* LA SFERT (DIN 'TOP') */
+  top: 25%;
+
+  /* INTARZIERE - '1.5 MS'  */
+  transition-delay: 0.15s;
+}
+
+/* ==============================================
+   (3) PSEUDO-ELEM. 'SPAN:NTH-CHILD(3)' 
+================================================= */
+span:nth-child(3) {
+  /* JUMATATE (DIN 'STANGA') */
+  /* left: 50%; */
+
+  /* JUMATATE (DIN 'TOP') */
+  top: 50%;
+
+  /* INTARZIERE - '3 MS'  */
+  transition-delay: 0.3s;
+}
+
+/* ==============================================
+   (4) PSEUDO-ELEM. 'SPAN:NTH-CHILD(4)' 
+================================================= */
+span:nth-child(4) {
+  /* LA 3 SFERTURI (DIN 'STANGA') */
+  /* left: 75%; */
+
+  /* LA 3 SFERTURI (DIN 'TOP') */
+  top: 75%;
+
+  /* INTARZIERE - '4 MS'  */
+  transition-delay: 0.45s;
+}
