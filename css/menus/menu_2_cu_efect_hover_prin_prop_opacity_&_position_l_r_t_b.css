@@ -1,0 +1,157 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ==============================================
+  ELEM. 'UL'
+================================================= */
+ul {
+  margin: 0;
+  padding: 0;
+
+  /* FLEX */
+  display: flex;
+
+  /* DEZACTIVARE PUNCTE LIST */
+  list-style-type: none;
+}
+
+/* ==============================================
+  ELEM. 'A' - DIN 'LI' - DIN 'UL'
+================================================= */
+ul li a {
+  position: relative;
+
+  color: #272727;
+  font-size: 20px;
+
+  /* ELIMINAM SUBLINIEREA */
+  text-decoration: none;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin: 0px 10px;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  HOVER - ELEM. 'A'
+================================================= */
+a:hover {
+  /* CULOARE DE FUNDAL 'ROSIE' */
+  background-color: #e91e63;
+
+  /* CULOARE TEXT - 'ALB */
+  color: white;
+}
+
+/* ==============================================
+  PSEUDO-ELEM. 'A:BEFORE'
+  (PT. CREAREA 'BORDER'/'COLTULUI' DIN 'STANGA JOS')
+================================================= */
+a:before {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+
+  /* SOS */
+  bottom: 12px;
+
+  /* IN STANGA */
+  left: 12px;
+
+  /* LATIME */
+  width: 12px;
+
+  /* INALTIME */
+  height: 12px;
+
+  /* BORDER  */
+  border: 3px solid #e91e63;
+
+  /* PLASAM 'BORDER' DOAR IN 'STANGA' & 'JOS' */
+  /* PROP. 'BORDER-WIDTH' = 'TOP', 'RIGHT', 'BOTTOM', 'LEFT' */
+  border-width: 0 0 3px 3px;
+
+  /* INVIZIBIL */
+  opacity: 0;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.3s;
+}
+
+/* ==============================================
+  HOVER - PSEUDO-ELEM. 'A:BEFORE'
+    (PT. CREAREA 'BORDER'/'COLTULUI' DIN 'STANGA JOS')
+================================================= */
+a:hover:before {
+  /* VIZIBILITATE COMPLETA */
+  opacity: 1;
+
+  /* MISCARE - IN 'AFARA COLTULUI' - 'STANGA JOS' */
+  bottom: -8px;
+  left: -8px;
+}
+
+/* ==============================================
+  PSEUDO-ELEM. 'A:AFTER'
+  (PT. CREAREA 'BORDER'/'COLTULUI' DIN 'DREAPTA SUS')
+================================================= */
+a:after {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+
+  /* SUS */
+  top: 12px;
+
+  /* IN DREAPTA */
+  right: 12px;
+
+  /* LATIME */
+  width: 12px;
+
+  /* INALTIME */
+  height: 12px;
+
+  /* INALTIME */
+  border: 3px solid #e91e63;
+
+  /* PLASAM 'BORDER' DOAR IN 'SUS' & 'DREAPTA' */
+  /* PROP. 'BORDER-WIDTH' = 'TOP', 'RIGHT', 'BOTTOM', 'LEFT' */
+  border-width: 3px 3px 0 0;
+
+  /* INVIZIBIL */
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+/* ==============================================
+  HOVER - PSEUDO-ELEM. 'A:AFTER'
+    (PT. CREAREA 'BORDER'/'COLTULUI' DIN 'DREAPTA SUS')
+
+================================================= */
+a:hover:after {
+  /* VIZIBIL COMPLET */
+  opacity: 1;
+
+  /* MISCARE - IN 'AFARA COLTULUI' - 'DREAPTA SUS' */
+  top: -8px;
+  right: -8px;
+}
