@@ -1,0 +1,127 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: verdana;
+}
+
+/* ==============================================
+  ELEM. 'UL'
+================================================= */
+ul {
+  /* FLEX (PT. PLASAREA A ELEM. - PE ACEEASI LINIE ) */
+  display: flex;
+  padding: 0;
+}
+
+/* ==============================================
+  ELEM. 'LI'
+================================================= */
+li {
+  /* DEZACTIVARE PUNCTE LISTA */
+  list-style-type: none;
+  padding: 10px 20px;
+}
+
+/* ==============================================
+  ELEM. 'A'
+================================================= */
+a {
+  position: relative;
+
+  text-decoration: none;
+
+  /* 'LITERE MARI' */
+  text-transform: uppercase;
+
+  font-size: 20px;
+  color: #222;
+}
+
+/* ==============================================
+  PSEUDO-ELEM. 'A:BEFORE'
+  (PT. CREAREA 'LINIEI ALBARTRE' - DIN 'STANGA')
+================================================= */
+ul li a:before {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+
+  /* IN JOS - FATA DE 'TOP' */
+  top: 120%;
+
+  /* IN 'STANGA' */
+  left: 0;
+
+  /* DIMENSIUNI LINIEI */
+  width: 0;
+  height: 5px;
+
+  /* FUNDAL 'ALBASTRU DESCHIS' */
+  background-color: #00bcd4;
+
+  /* DURATA SHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  HOVER - PSEUDO-ELEM. 'A:BEFORE'
+   (PT. CRESTEREA & MUTAREA 'LINIEI ALBASTRE' 
+      - DIN 'STANGA' IN 'DREAPTA')
+================================================= */
+ul li a:hover:before {
+  /* LATIME CRESTE LA JUMATATE */
+  width: 50%;
+
+  /* SE MUTA IN 'DREAPTA' - PE AXA 'X' */
+  transform: translateX(100%);
+}
+
+/* ==============================================
+  PSEUDO-ELEM. 'A:AFTER'
+    (PT. CREAREA 'LINIEI ROZ' - DIN 'DREAPTA')
+================================================= */
+ul li a:after {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+
+  /* IN JOS - FATA DE 'TOP' */
+  top: 120%;
+
+  /* IN 'DREAPTA' */
+  right: 0;
+
+  /* DIMENSIUNI LINIE */
+  width: 0;
+  height: 5px;
+
+  /* FUNDAL 'ROZ' */
+  background-color: #f0f;
+
+  /* DURATA SHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  HOVER - PSEUDO-ELEM. 'A:AFTER'
+ (PT. CRESTEREA & MUTAREA 'LINIEI ROZ' 
+      - DIN 'DREAPTA' IN 'STANGA')
+================================================= */
+ul li a:hover:after {
+  /* CRESTEREA LATIMII LA JUMATATE */
+  width: 50%;
+
+  /* SE MUTA IN 'STANGA' - PE AXA 'X' */
+  transform: translateX(-100%);
+}
