@@ -1,0 +1,163 @@
+/* IMPORT 'GOOGLE FONT' */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background-color: #212121;
+}
+
+/* ==============================================
+  CLS. 'FIG'
+================================================= */
+.fig {
+  position: relative;
+  width: 500px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+
+  /* RAZA 'BORDER' */
+  border-radius: 10px;
+
+  /* ASCUNDERE 'SUPRAPUNERI' */
+  overflow: hidden;
+}
+
+/* ==============================================
+  ELEM. 'IMG' -- DIN CLS. 'FIG'
+================================================= */
+.fig img {
+  width: 100%;
+}
+
+/* ==============================================
+  PSEUDO-CLS. ':BEFORE' -- DIN CLS. 'FIG'
+================================================= */
+.fig:before {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  height: 100%;
+  width: 100%;
+
+  /* FUNDAL */
+  background-color: #006266;
+
+  /* VIZIBILITATE PE JUMATATE */
+  opacity: 0.5;
+
+  /* POZITIONAREA 'SUB FIG' (PE AXA 'Y') */
+  transform: translateY(100%);
+
+  /* INTARZIEREA SCHIMBARI */
+  transition-delay: 0.25s;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.25s;
+}
+
+/* ==============================================
+  HOVER - PSEUDO-CLS. ':BEFORE' -- DIN CLS. 'FIG'
+================================================= */
+.fig:hover:before {
+  /* MUTAREA 'BEFORE' PE 'FIG' (PE AXA 'Y') */
+  transform: translateY(0);
+
+  /* INTARZIEREA SCHIMBARI */
+  transition-delay: 0s;
+}
+
+/* ==============================================
+  CLS. 'CAPTION' -- DIN CLS. 'FIG'
+================================================= */
+.fig .caption {
+  /* POZITIONAREA */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* PLASARE PE 'KAYER'-UL DE SUB 'TEXT' */
+  z-index: 1;
+
+  /* FLEX */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* INVIZIBILITATEA PSEUDO-CLS */
+  opacity: 0;
+
+  /* POZITIONARE 'DEASUPRA FIG' (PE AXA 'Y') */
+  transform: translateY(-20px);
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.25s ease;
+}
+
+/* ==============================================
+ ELEM. 'H3' & 'H5' -- DIN CLS. 'FIG'
+================================================= */
+.fig h3,
+.fig h5 {
+  margin: 0;
+
+  /* SPATIU INTRE LITERE */
+  letter-spacing: 1px;
+}
+
+/* ==============================================
+ ELEM. 'H3' -- DIN CLS. 'FIG'
+================================================= */
+.fig h3 {
+  /* 'LITERE MARI' */
+  text-transform: uppercase;
+
+  /* GROSIME TEXT ('REGULAR') */
+  font-weight: 400;
+
+  margin-bottom: 5px;
+}
+
+/* ==============================================
+ ELEM. 'H5' -- DIN CLS. 'FIG'
+================================================= */
+.fig h5 {
+  /* FUNDAL 'H5' */
+  background-color: #ae895d;
+
+  /* DISTANTARE (VERTICALA ORIZONTALA) */
+  padding: 3px 10px;
+}
+
+/* ==============================================
+  CLS. 'CAPTION' -- DIN 'HOVER' - CLS. 'FIG'
+================================================= */
+.fig:hover .caption {
+  /* MUTAREA PE POZITIA 'FIG' (PE AXA 'Y') */
+  transform: translateY(0);
+
+  /* VIZIBILITATE COMPLETA */
+  opacity: 1;
+
+  /* DURATA SCHIMBARI */
+  transition-delay: 0.3s;
+}
