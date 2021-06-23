@@ -1,0 +1,107 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #4b4b4b;
+}
+
+/* ==============================================
+  ELEM. 'UL'
+================================================= */
+ul {
+  /* FLEX */
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==============================================
+  ELEM. 'LI'
+================================================= */
+li {
+  list-style: none;
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 10px;
+
+  /* DURATA SCHIMBARI */
+  transition: 2s;
+}
+
+/* ==============================================
+  HOVER - ELEM. 'LI'
+================================================= */
+ul:hover li {
+  /* ROTIREA & MUTAREA IN 'SUS' (PE AXA 'Y') */
+  transform: rotate(45deg) translateY(-200px);
+
+  /* INVIZIBIL */
+  opacity: 0;
+
+  /* PROP. 'FILTER' = FUNC. "BLUR()' 90 */
+  filter: blur(20px);
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(1)'
+================================================= */
+ul li:nth-child(1) {
+  /* FARA INTARZIERE */
+  transition-delay: 0;
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(2)'
+================================================= */
+ul li:nth-child(2) {
+  /* INTARZIERE - '4 MS' */
+  transition-delay: 0.4s;
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(3)'
+================================================= */
+ul li:nth-child(3) {
+  /* INTARZIERE - '4 MS' */
+  transition-delay: 0.8s;
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(4)'
+================================================= */
+ul li:nth-child(4) {
+  /* INTARZIERE - '1.2 S' */
+  transition-delay: 1.2s;
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(5)'
+================================================= */
+ul li:nth-child(5) {
+  /* INTARZIERE - '1.6 S' */
+  transition-delay: 1.6s;
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(6)'
+================================================= */
+ul li:nth-child(6) {
+  /* INTARZIERE - '2 S' */
+  transition-delay: 2s;
+}
+
+/* ==============================================
+  SELECT. ELEM. 'LI:NTH-CHILD(7)'
+================================================= */
+ul li:nth-child(7) {
+  /* INTARZIERE - '2 S' */
+  transition-delay: 2.4s;
+}
