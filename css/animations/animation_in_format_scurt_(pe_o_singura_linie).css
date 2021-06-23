@@ -1,0 +1,142 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+}
+
+/* ======================================================
+    ELEM. 'DIV'
+========================================================= */
+div {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+
+  /* ============================================== */
+  /* ADAUGAREA  'ANIMATIEI' (CREATA IN '@KEYFRAME') */
+  /* ============================================== */
+
+  /* ______________________________________________ */
+  /* [1] NUMELE ANIMATIEI (SAU 'FUNCTIEI') */
+  /* animation-name: moving; */
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* [2] DURATA ANIMATIEI */
+  /* animation-duration: 3s; */
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* [3] PROP. 'ANIMATION-FILL-MODE' 
+     (SPECIFICA BROWSER-ULUI DE UNDE SA 'PORNEASCA' SI UNDE SA 'INCHEIE') */
+
+  /* (1) VAL. 1 - 'NONE' [DEFAULT] ('BROWSERUL' - 'NU FACE NIMIC' DUPA 'INCHEIEREA ANIMATIEI') */
+  /* animation-fill-mode: none; */
+
+  /* (2) VAL. 2 - 'FORWARDS' ('BROWSERUL' - PREIA 'ULTIMA SCENA' A 'ANIMATIEI') */
+  /* animation-fill-mode: forwards; */
+
+  /* (3) VAL. 3 - 'BACKWARDS' ('BROWSERUL' - PREIA 'SCENA DE PORNIRE' A 'ANIMATIEI') */
+  /* animation-fill-mode: backwards; */
+
+  /* (4) VAL. 4 - 'BOTH' ['FORWARDS' & 'BACKWARDS'] 
+   ('BROWSERUL' - PREIA 'DOR SCENELE' CREATE IN '@KEYFRAME') */
+  /* animation-fill-mode: both; */
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* [4] PROP. 'ANIMATION-ITERATION-COUNT' 
+  (SPEC. 'NR. DE REPETARI' ALE 'ANIMATIEI') */
+  /* animation-iteration-count: 1; */
+  /* animation-iteration-count: infinite; */
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* [5] PROP. 'ANIMATION-TIMING-FUNCTION' 
+  (SPEC. 'BROWSER-ULUI 'VITEZA / MODUL DE MISCARE' AL 'ANIMATIEI'') */
+
+  /* (1) 'EASE' = INCEPE 'INCET', MERGE 'REPEDE', INCHEIE 'INCET' */
+  /* animation-timing-function: ease; */
+
+  /* (2) 'EASE-OUT' = INCEPE 'REPEDE', INCHEIE 'INCET' */
+  /* animation-timing-function: ease-out; */
+
+  /* (3) 'EASE-IN' = INCEPE 'INCET', INCHEIE 'REPEDE' */
+  /* animation-timing-function: ease-in; */
+
+  /* (4) 'EASE-IN-OUT' (SIM. CU 'EASE') = INCEPE 'INCET', MERGE 'REPEDE', INCHEIE 'INCET' */
+  /* animation-timing-function: ease-in-out; */
+
+  /* (5) 'EASE-LINEAR' = VITEZA DE MISCARE ESTE CONSTANTA PE INTREAGA DURATA DE TIMP A ANIMATIEI */
+  animation-timing-function: linear;
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* [6] PROP. 'ANIMATION-DIRECTION' 
+  (SPEC. DIRECTIA ANIMATIEI) */
+
+  /* (1) 'NORMAL' [DEFAULT] 
+  (SPEC. 'RULAREA ANIMATIEI' DE LA 'INCEPUT' LA 'SFARSIT') */
+  /* animation-direction: normal; */
+
+  /* (2) 'REVERSE'  
+  (SPEC. 'RULAREA ANIMATIEI' IN SENS 'INVERS'  DE LA 'SFARSIT' LA 'INCEPUT') */
+  /* animation-direction: reverse; */
+
+  /* (3) 'ALTERNATE' 
+  (SPEC. 'RULAREA ANIMATIEI' 
+   DE LA 'INCEPUT' LA 'SFARSIT' 
+   & 'INVERS'  DE LA 'SFARSIT' LA 'INCEPUT') */
+  /* animation-direction: alternate; */
+
+  /* (4) 'ALTERNATE-REVERS' 
+  (SPEC. 'RULAREA ANIMATIEI' 
+   DE LA  'SFARSIT'   LA  'INCEPUT' 
+   & 'INVERS'  DE LA 'INCEPUT' LA 'SFARSIT') */
+  /* animation-direction: alternate-reverse; */
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* [7] INTARZIEREA ANIMATIEI  */
+  /* animation-delay: 3s; */
+  /* ______________________________________________ */
+
+  /* ______________________________________________ */
+  /* PROP. 'ANIMATION' - FORMA SCURTA (PE 1 LINIE) */
+  /* ______________________________________________ */
+  /* SINTAZA: 
+        [1] 'NUME', 
+        [2] 'DURATA', 
+        [3] 'FILL-MODE', 
+        [4] 'NR. REPETARII',
+        [5] 'TIMING FUNC.',
+        [6] 'DIRECTIE',
+        [7] 'DELAY'
+   */
+  animation: moving 3s both 3 ease-in alternate 1s;
+}
+
+/* ======================================================
+    @CADRU CHEIE 'MOVING' (ASEMANATOR CU 'FUNCTIA')
+    (PAS. 1 - DEF. REGULII DE ANIMATIE)
+========================================================= */
+@keyframes moving {
+  /* (SCENA 1) KEYWORD '0%'  (DIN 'DURATA DE TIMP A SCHIMBARI') */
+  0% {
+    /* POZITIA 'INITIALA' - PE AXA 'X' */
+    transform: translateX(500px);
+  }
+
+  /*  (SCENA 2) KEYWORD '10%' (DIN 'DURATA DE TIMP A SCHIMBARI')  */
+  50% {
+    /* MUTAREA PE POZITIA '1000 PX' - PE AXA 'X'  */
+    transform: translateX(1000px);
+  }
+
+  /*  (SCENA 3) KEYWORD '100%' (DIN 'DURATA DE TIMP A SCHIMBARI') */
+  100% {
+    /* MUTAREA PE POZITIA '1000 PX' - PE AXA 'X'  */
+    transform: translate(1000px, 500px);
+  }
+}
