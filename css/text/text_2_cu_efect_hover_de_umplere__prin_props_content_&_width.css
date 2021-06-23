@@ -1,0 +1,60 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ==============================================
+  ELEM. 'H1'
+================================================= */
+h1 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  font-size: 120px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+/* ==============================================
+  PSEUDO-ELEM. 'H1:BEFORE'
+  (PT. CREAREA 'TEXTULUI' DE 'UMPLERE' (ASCUNS))
+================================================= */
+h1:before {
+  /* CONTINUT INSERAT */
+  content: "text";
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #262626;
+
+  /* TEXT INVIZIBIL */
+  width: 0%;
+
+  /* ASCUNDERE 'SUPRAPUNERI' */
+  overflow: hidden;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ==============================================
+  HOVER - PSEUDO-ELEM. 'H1:BEFORE'
+  (PT. AFISAREA 'TEXTULUI' DE 'UMPLERE')
+================================================= */
+h1:hover:before {
+  /* LATIME COMPLETA */
+  width: 100%;
+}
