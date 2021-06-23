@@ -1,0 +1,46 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+}
+
+/* ======================================================
+    ELEM. 'DIV'
+========================================================= */
+div {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+
+  /* ADAUGAREA  'ANIMATIEI' (CREATA IN '@KEYFRAME') */
+  /* NUMELE ANIMATIEI (SAU 'FUNCTIEI') */
+  animation-name: moving;
+
+  /* DURATA ANIMATIEI */
+  animation-duration: 3s;
+}
+
+/* ======================================================
+    @CADRU CHEIE 'MOVING' (ASEMANATOR CU 'FUNCTIA')
+    (PAS. 1 - DEF. REGULII DE ANIMATIE)
+========================================================= */
+@keyframes moving {
+  /* (SCENA 1) KEYWORD '0%'  (DIN 'DURATA DE TIMP A SCHIMBARI') */
+  0% {
+    /* POZITIA 'INITIALA' - PE AXA 'X' */
+    transform: translateX(0);
+  }
+
+  /*  (SCENA 2) KEYWORD '10%' (DIN 'DURATA DE TIMP A SCHIMBARI')  */
+  10% {
+    /* MUTAREA PE POZITIA '1000 PX' - PE AXA 'X'  */
+    transform: translateX(1000px);
+  }
+
+  /*  (SCENA 3) KEYWORD '100%' (DIN 'DURATA DE TIMP A SCHIMBARI') */
+  100% {
+    /* MUTAREA PE POZITIA '1000 PX' - PE AXA 'X'  */
+    transform: translate(1000px, 500px);
+  }
+}
