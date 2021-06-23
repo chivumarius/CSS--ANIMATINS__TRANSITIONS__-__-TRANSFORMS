@@ -1,0 +1,138 @@
+/* ==============================================
+  ELEM. 'BODY'
+================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX (PLASAREA PE ACEASI LINIE) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #dfe6e9;
+}
+
+/* ==============================================
+  CLS. 'CONTAINER'
+================================================= */
+.container {
+  /* FLEX (PLASAREA PE ACEASI LINIE) */
+  display: flex;
+
+  text-align: center;
+}
+
+/* ==============================================
+  CLS. 'ICON'
+  (PT. 'FUNDALUL CUTIEI ICON'-ULUI)
+================================================= */
+.icon {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 90px;
+  height: 90px;
+
+  /* FUNDAL 'ICON' */
+  background: #f1f1f1;
+
+  margin: 10px;
+
+  /* RAZA ELEMENT */
+  border-radius: 30%;
+
+  /* CULOARE 'ICON' */
+  color: #10ac84;
+
+  /* UMBRA 'ICON' */
+  box-shadow: 0 5px 15px -5px #00000070;
+
+  /* ASCUNDEREA 'SUPRAPUNERILOR' */
+  overflow: hidden;
+}
+
+/* ==============================================
+  ELEM. 'I' - DIN CLS. 'ICON'
+  (PT. PERSONALIZAREA 'ICON'-ULUI 'FONT AWESOME')
+================================================= */
+.icon i {
+  line-height: 90px;
+  font-size: 25px;
+
+  /* DURATA SCHIMBARI */
+  transition: 0.2s;
+}
+
+/* ==============================================
+  HOVER - ELEM. 'I' - DIN CLS. 'ICON'
+================================================= */
+.icon:hover i {
+  /* MARIREA ELEM. 'I' */
+  transform: scale(1.3);
+  /* CULOAREA LUI 'I' */
+  color: #f1f1f1;
+}
+
+/* ==============================================
+  PSEUDO-CLS. 'ICON::BEFORE'
+  (PT. CREAREA 'FUNDALULUI MISCATOR')
+================================================= */
+.icon::before {
+  /* CONTINUT FARA TEXT */
+  content: "";
+
+  /* POZITIONAREA */
+  position: absolute;
+  left: -110%;
+  top: 90%;
+
+  /* DIMENSIUNI */
+  width: 120%;
+  height: 120%;
+
+  /* FUNDAL */
+  background: #10ac84;
+
+  /* ROTIREA 'BEFORE' */
+  transform: rotate(45deg);
+}
+
+/* ==============================================
+  HOVER - PSEUDO-CLS. 'ICON::BEFORE'
+================================================= */
+.icon:hover::before {
+  /* DURATA - 'ANIMATION' ('NUME', 'DURATA', 'REPETARE', 'RAMANEREA PE POZITIA FINALA') */
+  animation: animation 0.7s 1 forwards;
+}
+
+/* ==============================================
+  @KEYFRAME 'ANIMATION'
+================================================= */
+@keyframes animation {
+  /* CADRUL LA 'PORNIRE' */
+  0% {
+    /* PLASAT - IN 'STANGA' IN 'AFARA CONTAINER'-ULUI */
+    left: -110%;
+
+    /* PLASAT - 'JOS'  */
+    top: 90%;
+  }
+
+  /* CADRUL LA 'JUMATATE' */
+  50% {
+    /* MUTAT - IN 'CONTAINER' IN 'STANGA' */
+    left: 15%;
+
+    /* MUTAT - IN 'SUS' IN 'AFARA CONTAINER'-ULUI */
+    top: -30%;
+  }
+
+  /* CADRUL 'COMPLET' */
+  100% {
+    /* MUTAT - IN 'SUS' IN 'AFARA CONTAINER'-ULUI */
+    top: -10%;
+
+    /* MUTAT - IN 'STANGA' IN 'AFARA CONTAINER'-ULUI */
+    left: -10%;
+  }
+}
