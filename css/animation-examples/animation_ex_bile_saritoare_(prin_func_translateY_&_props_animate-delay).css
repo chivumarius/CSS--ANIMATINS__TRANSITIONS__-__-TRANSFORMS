@@ -1,0 +1,115 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FUNDAL 'NEGRU' */
+  background-color: #262626;
+}
+
+/* ======================================================
+    ELEM. 'UL'
+========================================================= */
+ul {
+  /* FLEX */
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  /* BORDER 'JOS' */
+  border-bottom: solid 10px white;
+}
+
+/* ======================================================
+    ELEM. 'LI'
+========================================================= */
+ul li {
+  list-style: none;
+
+  /* DIMENSIUNI */
+  width: 30px;
+  height: 30px;
+
+  /* FUNDAL 'ALB' */
+  background-color: white;
+
+  margin: 0 10px;
+
+  /* RAZA */
+  border-radius: 50%;
+
+  /* @KEYFRAME - 'JUMPING' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT)*/
+  animation: jumping 0.8s linear infinite;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'JUMPING'
+(PT. CREAREA 'SARITURII' BILELOR)
+========================================================= */
+@keyframes jumping {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* FARA MUTARE */
+    transform: translateY(0);
+  }
+
+  /* KEYWORD 'INTERMEDIAR' */
+  50% {
+    /* MISCAREA IN 'SUS' (PE AXA 'Y') */
+    transform: translateY(-150px);
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* FARA MUTARE */
+    transform: translateY(0);
+  }
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILD(1)'
+(PT. SELECTAREA BILELOR & INTARZIEREA PORNIRI ANIMATIEI PT ELE)
+========================================================= */
+ul li:nth-child(1) {
+  /* INTARZIEREA ANIMATIEI (45 MS) */
+  animation-delay: 0.45s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILD(2)'
+========================================================= */
+ul li:nth-child(2) {
+  /* INTARZIEREA ANIMATIEI 60 MS) */
+  animation-delay: 0.6s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILD(3)'
+========================================================= */
+ul li:nth-child(3) {
+  /* INTARZIEREA ANIMATIEI (30 MS) */
+  animation-delay: 0.3s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILD(4)'
+========================================================= */
+ul li:nth-child(4) {
+  /* OPRIREA INTARZIEREA ANIMATIEI (0 MS) */
+  animation-delay: 0;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILD(5)'
+========================================================= */
+ul li:nth-child(5) {
+  /* INTARZIEREA ANIMATIEI (10 MS) */
+  animation-delay: 0.1s;
+}
