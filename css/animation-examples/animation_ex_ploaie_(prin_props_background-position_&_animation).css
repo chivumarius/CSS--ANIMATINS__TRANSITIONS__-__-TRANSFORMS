@@ -1,0 +1,48 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  padding: 0;
+  margin: 0;
+
+  /* IMG  DE  FUNDAL */
+  background: url(../../imgs/animation-effects/bg_rain.jpg);
+
+  /* FUNDAL FARA REPETARE */
+  background-repeat: no-repeat;
+
+  /* DIMENSIUNE FUNDAL */
+  background-size: cover;
+}
+
+/* ======================================================
+    CLS. 'RAIN'
+========================================================= */
+.rain {
+  /* INALTIME COMPLETA */
+  height: 100%;
+
+  /* IMG. DE FUNDAL - 'RAIN.PNG'*/
+  background: url(../../imgs/animation-effects/rain.png);
+
+  /* @KEYFRAME - 'RAIN' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT)*/
+  animation: rain 0.3s linear infinite;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'RAIN'
+========================================================= */
+@keyframes rain {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* POZITIONARE FUNDAL */
+    background-position: 0% 0%;
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* POZITIONARE FUNDAL */
+    background-position: 20% 100%;
+  }
+}
