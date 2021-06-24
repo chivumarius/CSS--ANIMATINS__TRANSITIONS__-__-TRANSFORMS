@@ -1,0 +1,58 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Lato", sans-serif;
+
+  /* 'FUNDAL' DE CULOARE 'ALBASTRA' */
+  background-color: #273c75;
+}
+
+/* ======================================================
+    ELEM. 'H1'
+========================================================= */
+h1 {
+  font-size: 200px;
+  text-align: center;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* IMAGINE DE FUNDAL - 'H1' */
+  background: url(../../imgs/animation-effects/image.jpg);
+
+  /* PROP. '-WEBKIT-BACKGROUND-CLIP' (TRANSFORMAREA IMAGINE DE FUNDAL - IN FUNDAL PT. 'TEXT') */
+  -webkit-background-clip: text;
+
+  /* CULOARE FONT - 'TRANSPARENT' */
+  color: transparent;
+
+  /* @KEYFRAME - 'TEXT-BACKGROUND'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: text-background 20s linear infinite;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'TEXT-BACKGROUNT'
+    (PT. MISCAREA PRIN 'ROTIREA' PE AXELE 'X' & 'Y')
+========================================================= */
+@keyframes text-background {
+  /* KEYWORD 'INITIAL' */
+  from {
+    /* POZITIONAREA IMG DE FUNDAL */
+    background-position: 0 0;
+  }
+
+  /* KEYWORD 'FINAL' */
+  to {
+    /* POZITIONARE COMPLETA A IMG. DE FUNDAL */
+    background-position: 100% 100%;
+  }
+}
