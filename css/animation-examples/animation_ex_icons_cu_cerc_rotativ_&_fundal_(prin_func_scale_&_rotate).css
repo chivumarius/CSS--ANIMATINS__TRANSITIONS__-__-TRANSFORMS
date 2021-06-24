@@ -1,0 +1,184 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ======================================================
+    ELEM. 'UL'
+========================================================= */
+ul {
+  /* FLEX */
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* ======================================================
+    ELEM. 'LI'
+========================================================= */
+ul li {
+  position: relative;
+
+  list-style-type: none;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* DIMENSIUNI */
+  width: 120px;
+  height: 120px;
+
+  margin: 0 20px;
+
+  /* BORDER */
+  border: 2px solid #0a3d62;
+
+  /* RAZA BORDER */
+  border-radius: 50%;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+    HOVER - ELEM. 'LI'
+========================================================= */
+ul li:hover:before {
+  /* VIZIBILITATE COMPLETA */
+  opacity: 1;
+
+  /* MICSORARE */
+  transform: scale(0.8);
+}
+
+/* ======================================================
+    ELEM. 'I'
+========================================================= */
+ul li i {
+  /* DIMENSIUNE ICON */
+  font-size: 48px;
+
+  /* CULOARE ICON */
+  color: #0a3d62;
+
+  /* MICSORARE LA JUMATATE */
+  transition: 0.5s;
+}
+
+/* ======================================================
+   HOVER - ELEM. 'I'
+========================================================= */
+ul li:hover i {
+  /* SCHIMBARE CULOARE IN 'ALB' */
+  color: white;
+}
+
+/* ======================================================
+  PSEUDO-CLS. 'LI:BEFORE'
+(PT. CREAREA 'FUNDALULUI' 'INCHIS' & CU FONT 'DESCHIS')
+========================================================= */
+ul li:before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* FUNDAL 'NEGRU' */
+  background-color: #0a3d62;
+
+  /* ROTUNJIRE */
+  border-radius: 50%;
+
+  /* INVIZIBIL */
+  opacity: 0;
+
+  /* PLASAREA 'LAYOUT' IN SPATELE TEXTULUI */
+  z-index: -1;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+  HOVER - PSEUDO-CLS. 'LI:BEFORE'
+========================================================= */
+ul li:hover:after {
+  /* VIZIBIL COMPLET */
+  opacity: 1;
+
+  /* @KEYFRAME - 'ROTATING' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: rotating 10s linear infinite;
+}
+
+/* ======================================================
+    PSEUDO-CLS. 'LI:AFTER'
+(PT. CREAREA 'CERCULUI ROTATIV')
+========================================================= */
+ul li:after {
+  content: "";
+
+  /* POZITIE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* FUNDAL - 'TRANSPARENT' */
+  background-color: transparent;
+
+  /* BORDER */
+  border: 2px dashed #2e86de;
+
+  /* RAZA BORDER */
+  border-radius: 50%;
+
+  /* INVIZIBIL */
+  opacity: 0;
+
+  /* POZITIONAREA IN SPATELE TEXTULUI */
+  z-index: -1;
+
+  box-sizing: border-box;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'ROTATING'
+========================================================= */
+@keyframes rotating {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* MICSORARE PUTIN & FARA ROTARE */
+    transform: scale(0.92) rotate(0deg);
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* MICSORARE PUTIN & CU ROTATIE COMPLETA */
+    transform: scale(0.92) rotate(360deg);
+  }
+}
