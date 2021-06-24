@@ -1,0 +1,57 @@
+/* ======================================================
+
+
+
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX (PT. ALINIERE PE ACEIASI LINIE) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #26de81;
+}
+
+/* ======================================================
+    ELEM. 'H1'
+========================================================= */
+h1 {
+  text-align: center;
+  color: white;
+  font-family: arial;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 15px;
+
+  /* UMBRA PE TEXT */
+  text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+    0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
+
+  /* ANIMAT '@KEYFRAME'-ULUI 
+  (NUME, DURATA, TIMING FUNC. (TIP VITEZA), ITERATION-COUNT (REPETARE)) */
+  animation: float 3s linear infinite;
+
+  /* DIRECTIA ANIMATIEI (CU 'MISCARE' - 'START-FINIS' & 'FINIS-START') */
+  animation-direction: alternate;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'FLOAT'
+    (PT. CREAREA 'ROTIRI TEXTULUI')
+========================================================= */
+@keyframes float {
+  /* KEYWORD 'INITIAL' */
+  from {
+    /* ROTIRE - IN 'SENSUL ACELOR DE CEASORNIC'  */
+    transform: rotate(5deg);
+  }
+
+  /* KEYWORD 'FINAL' */
+  to {
+    /* ROTIRE - CONTRAR 'SENSUL ACELOR DE CEASORNIC'  */
+    transform: rotate(-5deg);
+  }
+}
