@@ -1,0 +1,159 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ======================================================
+    ELEM. 'UL'
+========================================================= */
+ul {
+  /* FLEX */
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================================================
+    ELEM. 'LI'
+========================================================= */
+ul li {
+  list-style-type: none;
+  font-size: 80px;
+  letter-spacing: 20px;
+
+  /* @KEYFRAME - 'LOADING' 
+  (NUME, DURATA, TIMING-FUNC., ITERATION-COUNT)*/
+  animation: loading 3s linear infinite;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'LOADING'
+========================================================= */
+@keyframes loading {
+  /* KEYWORD-UL 'INITIAL' */
+  0% {
+    /* CULOARE - 'ROSIE' */
+    color: red;
+
+    /* MUTARE IN 'STANGA' (PE AXA 'X') */
+    transform: translateX(-50px);
+
+    /* MARIREA SPATIULUI INTRE LITERE */
+    letter-spacing: 20px;
+
+    /* INVIZIVIL */
+    opacity: 0;
+  }
+
+  /* KEYWORD-UL LA '10%' */
+  10% {
+    /* VIZIBIL COMPLET */
+    opacity: 1;
+  }
+
+  /* KEYWORD-UL LA '50%' */
+  50% {
+    /* RESTRANGEREA SPATIULUI INTRE LITERE */
+    letter-spacing: -20px;
+
+    /* VIZIBIL COMPLET */
+    opacity: 1;
+  }
+
+  /* KEYWORD-UL 'FINAL' */
+  100% {
+    /* CULOARE - 'ALBASTRU' */
+    color: blue;
+
+    /* MUTAREA IN 'DREAPTA' (PE AXA 'X') */
+    transform: translateX(50px);
+
+    /* MARIREA SPATIULUI INTRE LITERE */
+    letter-spacing: 20px;
+
+    /* INVIZIBIL */
+    opacity: 0;
+  }
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(1)'
+========================================================= */
+ul li:nth-child(1) {
+  /* FARA INTARZIERE */
+  animation-delay: 0s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(2)'
+========================================================= */
+ul li:nth-child(2) {
+  /* INTARZIERE - '20 MS' */
+  animation-delay: 0.2s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(3)'
+========================================================= */
+ul li:nth-child(3) {
+  /* INTARZIERE - '40 MS' */
+  animation-delay: 0.4s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(4)'
+========================================================= */
+ul li:nth-child(4) {
+  /* INTARZIERE - '60 MS' */
+  animation-delay: 0.6s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(5)'
+========================================================= */
+ul li:nth-child(5) {
+  /* INTARZIERE - '80 MS' */
+  animation-delay: 0.8s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(6)'
+========================================================= */
+ul li:nth-child(6) {
+  /* INTARZIERE - '1S' */
+  animation-delay: 1s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(7)'
+========================================================= */
+ul li:nth-child(7) {
+  /* INTARZIERE - '1.2S' */
+  animation-delay: 1.2s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(8)'
+========================================================= */
+ul li:nth-child(8) {
+  /* INTARZIERE - '1.4S' */
+  animation-delay: 1.4s;
+}
+
+/* ======================================================
+  PSEUDO-SELECTORUL 'LI:NTH-CHILD(9)'
+========================================================= */
+ul li:nth-child(9) {
+  /* INTARZIERE - '1.6S' */
+  animation-delay: 1.6s;
+}
