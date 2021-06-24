@@ -1,0 +1,64 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ea2027;
+}
+
+/* ======================================================
+    ELEM. 'H1'
+========================================================= */
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'SPAN:BEFORE'
+    (CONTINE CUVINTELE CE SE SCHIMBA)
+========================================================= */
+span:before {
+  /* CONTINUT */
+  content: "TRANZITIILE";
+
+  /* TEXT CU 'LITERE MARI' */
+  text-transform: uppercase;
+  font-family: arial;
+
+  /* CULOAREA TEXTULUI */
+  color: #1b1464;
+
+  /* ANIMATIE '@KEYWORD' - 'WORD-SWITCH' (NUME, DURATA, REPETARE)*/
+  animation: word-switch 5s infinite;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'WORD-SWITCH'
+    (PT. SCHIMBAREA CUVINTELOR)
+========================================================= */
+@keyframes word-switch {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* CONTINUT */
+    content: "tranzitiile";
+  }
+
+  /* KEYWORD 'INTERMEDIAR' */
+  50% {
+    /* CONTINUT */
+    content: "animatiile";
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* CONTINUT */
+    content: "transformarile";
+  }
+}
