@@ -1,0 +1,130 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX (PT. PLASAREA PE ACEASI LINIE) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+
+  /* FUNDAL */
+  background-color: #262626;
+}
+
+/* ======================================================
+    ELEM. 'UL'
+========================================================= */
+ul {
+  /* FLEX (PT. PLASAREA PE ACEASI LINIE) */
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================================================
+    ELEM. 'LI'
+========================================================= */
+ul li {
+  list-style: none;
+  color: #484848;
+  font-size: 80px;
+
+  /* SPATIERE INTRE LITERE */
+  letter-spacing: 15px;
+
+  /* ANIMATIA '@KEYFRAME' - 'LIGHTING' 
+  (NUME,  DURATA, TIMING-FUNC, ITERATION-COUNT)*/
+
+  animation: lighting 1.4s linear infinite;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'LIGHTING'
+========================================================= */
+@keyframes lighting {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* CULOARE INCHISA */
+    color: #484848;
+
+    /* TEXT FARA UMBRA */
+    text-shadow: none;
+  }
+
+  /* KEYWORD 'INTERMEDIAR' */
+  90% {
+    /* CULOARE INCHISA */
+    color: #484848;
+
+    /* TEXT FARA UMBRA */
+    text-shadow: none;
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* CULOARE DESCHISA */
+    color: #fff900;
+
+    /* TEXT CU UMBRA */
+    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+  }
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(1)'
+========================================================= */
+ul li:nth-child(1) {
+  /* ANIMATIE FARA 'INTARZIERE' */
+  animation-delay: 0;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(2)'
+========================================================= */
+ul li:nth-child(2) {
+  /* INTARZIEREA ANIMATIEI - CU '1 MS' */
+  animation-delay: 0.1s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(3)'
+========================================================= */
+ul li:nth-child(3) {
+  /* INTARZIEREA ANIMATIEI - CU '2 MS' */
+  animation-delay: 0.2s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(4)'
+========================================================= */
+ul li:nth-child(4) {
+  /* INTARZIEREA ANIMATIEI - CU '3 MS' */
+  animation-delay: 0.3s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(5)'
+========================================================= */
+ul li:nth-child(5) {
+  /* INTARZIEREA ANIMATIEI - CU '4 MS' */
+  animation-delay: 0.4s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(6)'
+========================================================= */
+ul li:nth-child(6) {
+  /* INTARZIEREA ANIMATIEI - CU '5 MS' */
+  animation-delay: 0.5s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'LI:NTH-CHILS(7)'
+========================================================= */
+ul li:nth-child(7) {
+  /* INTARZIEREA ANIMATIEI - CU '6 MS' */
+  animation-delay: 0.6s;
+}
