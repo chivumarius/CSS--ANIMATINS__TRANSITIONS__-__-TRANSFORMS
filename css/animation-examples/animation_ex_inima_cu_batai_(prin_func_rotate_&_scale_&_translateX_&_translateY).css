@@ -1,0 +1,152 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+
+  background-color: #262626;
+}
+
+/* ======================================================
+    CLS. 'HEART'
+========================================================= */
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+
+  /* FUNDAL 'ROSU' */
+  background-color: #ff3838;
+
+  /* ROTIRE IN 'SEBSUL ACELOR DE CEASORNIC' */
+  transform: rotate(45deg);
+
+  /* ANIMATIA '@KEWFRAME' - 'HEARTBEAT' 
+  (NUME, DURATA, TIMING-FUNC., ITERATION-COUNT)*/
+  animation: heartbeat 1.4s linear infinite;
+}
+
+/* ======================================================
+  PSEUDO-CLS. 'HEART:BEFORE'
+(PT. CONSTRUIREA PATRATULUI 'BEFORE' SI ROTUNJIREA SA)
+========================================================= */
+.heart:before {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI COMPLETE */
+  width: 100%;
+  height: 100%;
+
+  background-color: #ff3838;
+
+  /* RAZA  */
+  border-radius: 50%;
+
+  /* PLASAREA 'BEFORE' - 'SUS' (PE AXA 'Y')  */
+  transform: translateY(-50%);
+}
+
+/* ======================================================
+    PSEUDO-CLS. 'HEART:AFTER'
+(PT. CONSTRUIREA PATRATULUI 'AFTER' SI ROTUNJIREA SA)
+========================================================= */
+.heart:after {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI COMPLETE */
+  width: 100%;
+  height: 100%;
+
+  /* FUNDAL */
+  background-color: #ff3838;
+
+  /* RAZA */
+  border-radius: 50%;
+
+  /* PLASAREA 'AFTER' - IN 'STAMGA' (PE AXA 'X') */
+  transform: translateX(-50%);
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'LIGHTING'
+========================================================= */
+@keyframes lighting {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* CULOARE INCHISA */
+    color: #484848;
+
+    /* TEXT FARA UMBRA */
+    text-shadow: none;
+  }
+
+  /* KEYWORD 'INTERMEDIAR' */
+  90% {
+    /* CULOARE INCHISA */
+    color: #484848;
+
+    /* TEXT FARA UMBRA */
+    text-shadow: none;
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* CULOARE DESCHISA */
+    color: #fff900;
+
+    /* TEXT CU UMBRA */
+    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+  }
+}
+@keyframes heartbeat {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* ROTATIE '45DEG' & SCALARE 'NORMALA' */
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* KEYWORD '25%' */
+  25% {
+    /* ROTATIE '45DEG' & SCALARE 'NORMALA' */
+    transform: rotate(45deg) scale(1);
+  }
+
+  /* KEYWORD '30%' */
+  30% {
+    /* ROTATIE '45DEG' & SCALARE PRIN 'MARIRE' */
+    transform: rotate(45deg) scale(1.4);
+  }
+
+  /* KEYWORD '50%' */
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+
+  /* KEYWORD '70' */
+  70% {
+    /* ROTATIE '45DEG' & SCALARE PRIN 'MARIRE' */
+    transform: rotate(45deg) scale(1.4);
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* ROTATIE '45DEG' & SCALARE 'NORMALA' */
+    transform: rotate(45deg) scale(1);
+  }
+}
