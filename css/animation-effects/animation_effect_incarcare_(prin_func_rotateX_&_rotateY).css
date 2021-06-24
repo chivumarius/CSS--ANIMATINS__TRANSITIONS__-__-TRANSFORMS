@@ -1,0 +1,55 @@
+/* ======================================================
+
+
+
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #26de81;
+
+  /* PERSPECTIVA (PENTRU AXA 'Z') */
+  perspective: 200px;
+}
+
+/* ======================================================
+    CLS. 'LOADING'
+========================================================= */
+.loading {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 12px;
+  /* AANIMATIA (NUME, DURATA, TIMING-FUNC (TIP VITEZA), REPETARE) */
+  animation: loading 2s linear infinite;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'LOADIND'
+    (PT. CREAREA 'ROTIRI TEXTULUI')
+========================================================= */
+
+@keyframes loading {
+  /* KEYWORD 'INITIAL' */
+  0% {
+    /* POZITIA 'ROTATIILOR' PE AXELE 'X' & 'Y' */
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  /* KEYWORD 'INTERMEDIAR' */
+  50% {
+    /* MISCAREA PRIN 'ROTATIA' PE AXA 'Y' */
+    transform: rotateX(0deg) rotateY(180deg);
+  }
+
+  /* KEYWORD 'FINAL' */
+  100% {
+    /* MISCAREA PRIN 'ROTATIA' PE AXELE 'X' & 'Y' */
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}
