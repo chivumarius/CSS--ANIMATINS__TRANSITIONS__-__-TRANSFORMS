@@ -1,0 +1,44 @@
+/* ======================================================
+    CLS. 'BANNER'
+========================================================= */
+.banner {
+  /* INALTIME */
+  height: 100vh;
+
+  /* IMAGINE DE FUNDAL */
+  background: url(../../imgs/animation-effects/bg.png);
+
+  /* POZITIONAREA FUNDALULUI - PE AXELE  'X' & 'Y' */
+  background-position: 0 0;
+
+  /* ANIMATIA '@KEYFRAME' (NUME, DURATA, TIMING FUNC., ITERATION-COUNT) */
+  animation: animated-pattern 15s linear infinite;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'ANIMATED-PATTERN'
+  (PT. POZITIONAREA FUNDALULUI) 
+   (INALTIMEA IMG = 600PX, LATIMEA = 800PX)
+========================================================= */
+@keyframes animated-pattern {
+  /* KEYWORD 'INITIAL' */
+  from {
+    /* POZITIONAREA FUNDALULUI - PE AXELE  'X' & 'Y' */
+    background-position: 0 0;
+  }
+
+  /* KEYWORD 'FINAL' */
+  to {
+    /* MISCAREA VERTICALA 
+    (PRIN POZITIONAREA FUNDALULUI - PE AXA 'Y') */
+    /* background-position: 0px 600px; */
+
+    /* MISCAREA ORIZONTALA 
+    (PRIN POZITIONAREA FUNDALULUI - PE AXA 'X') */
+    /* background-position: 800px 0px; */
+
+    /* MISCAREA INCLINATA SAU 'ORIZONTALA' & 'VERTICALA'
+    (PRIN POZITIONAREA FUNDALULUI - PE AXELE  'X' & 'Y') */
+    background-position: 800px 600px;
+  }
+}
