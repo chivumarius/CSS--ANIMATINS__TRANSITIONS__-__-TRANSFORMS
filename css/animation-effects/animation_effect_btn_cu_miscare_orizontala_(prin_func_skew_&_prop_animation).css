@@ -1,0 +1,94 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FUNDAL */
+  background-color: #222;
+}
+
+/* ======================================================
+    ELEM. 'A'
+========================================================= */
+a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 40px;
+
+  /* BORDER */
+  border: 3px solid white;
+
+  padding: 40px 80px;
+
+  /* ASCUNDEREA 'SUPRAPUNERILOR' */
+  overflow: hidden;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'A:BEFORE'
+========================================================= */
+a:before {
+  content: "";
+  background-color: #f44336;
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* SIMENSIUNI 'BEFORE' */
+  width: 120px;
+  height: 100%;
+
+  /* PLASAREA IN SPATELE TEXTULUI */
+  z-index: -1;
+
+  /* INCLINAREA 'BEFORE'- SPRE 'DREAPTA'  */
+  transform: skew(-15deg);
+
+  /* ANIMATIA '@KEYFRAME' - 'MOVING' 
+  (NUME, DURATA, TIMING-FUNC., ITERATION-COUNT)*/
+  animation: moving 1.2s linear infinite;
+
+  /* SURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+  @KEYFRAME-UL 'SHAKE'
+========================================================= */
+@keyframes moving {
+  /* KEYWORD 'INITIAL' */
+  from {
+    /* POZITIONAREA - IN 'AFARA BUTUNULUI' IN 'STANGA' */
+    left: -120px;
+  }
+
+  /* KEYWORD 'FINAL' */
+  to {
+    /* POZITIONAREA - IN 'AFARA BUTUNULUI' IN 'DREAPTA' */
+    left: 100%;
+  }
+}
+
+/* ======================================================
+    HOVER - PSEUDO-ELEM. 'A:BEFORE'
+========================================================= */
+a:hover:before {
+  /* LATIME CAT BUTONUL */
+  width: 100%;
+
+  /* 'BEFORE' - NEINCLINAT  */
+  transform: skew(0deg);
+
+  /* FARA ANIMATIE */
+  animation: none;
+}
