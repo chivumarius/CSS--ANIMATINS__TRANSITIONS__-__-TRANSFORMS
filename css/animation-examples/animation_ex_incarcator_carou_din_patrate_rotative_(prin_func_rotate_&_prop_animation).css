@@ -1,0 +1,181 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FUNDAL */
+  background-color: #0b1734;
+}
+
+/* ======================================================
+    CLS. 'CONTAINER' 
+(PT. A CREA 'ROMBUL' - CE VA CONTINE 'PATRATELE')
+========================================================= */
+.container {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 100px;
+  height: 100px;
+
+  /* ROTIREA CONTAINERULUI */
+  transform: rotate(45deg);
+
+  /* @KEYFRAME - 'ANIMATE' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: animate 1s linear infinite;
+}
+
+/* ======================================================
+    RLEM. 'SPAN'
+(PT. STILIZAREA CELOR '4 PATRATE')
+========================================================= */
+span {
+  position: absolute;
+
+  /* DIMENSIUNI (50 x 50) */
+  width: 50px;
+  height: 50px;
+
+  /* @KEYFRAME - 'ROTATE' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: rotate 1s linear infinite;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':NTH-CHILD(1)'
+(PT. POZITIONAREA SI CULOAREA 'PATRATULUI 1'/'SPAN-ULUI 1')
+========================================================= */
+span:nth-child(1) {
+  top: 0;
+  left: 0;
+
+  background-color: #fceba7;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':NTH-CHILD(2)'
+(PT. POZITIONAREA SI CULOAREA 'PATRATULUI 2'/'SPAN-ULUI 2')
+========================================================= */
+span:nth-child(2) {
+  top: 0;
+  right: 0;
+  background-color: #55ddb9;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':NTH-CHILD(3)'
+(PT. POZITIONAREA SI CULOAREA 'PATRATULUI 3'/'SPAN-ULUI 3')
+========================================================= */
+span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+
+  background-color: #fd6c64;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':NTH-CHILD(4)'
+(PT. POZITIONAREA SI CULOAREA 'PATRATULUI 4'/'SPAN-ULUI 4')
+========================================================= */
+span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+
+  background-color: #1f78b0;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':LAST-CHILD'
+    (PT. ANIMAREA 'BRATULUI' DIN 'DREAPTA')
+========================================================= */
+.cradle span:last-child {
+  /* @KEYFRAME - 'RIGHT-ARM'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: right-arm 2s ease-in infinite 1s;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ROTATE'
+(PT. 'ROTIREA' PATRATELOR - IN 'TREPTE' LA '90 DE GRADE' )
+========================================================= */
+@keyframes rotate {
+  /* SCENA 1 */
+  0% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* SCENA 2 */
+  10% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* SCENA 3 */
+  50% {
+    /* 'ROTIRE' LA '90 DEG' */
+    transform: rotate(90deg);
+  }
+
+  /* SCENA 4 */
+  90% {
+    /* 'ROTIRE' LA '90 DEG' */
+    transform: rotate(90deg);
+  }
+
+  /* SCENA 5 */
+  100% {
+    /* 'ROTIRE' LA '90 DEG' */
+    transform: rotate(90deg);
+  }
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ANIMATE'
+(PT. MARIREA DIMENSIUNIILOR  CONTAINER-ULUI CU 50%)
+========================================================= */
+@keyframes animate {
+  /* SCENA 1 */
+  0% {
+    /* DIMENSIUNI COMPLETE */
+    width: 100px;
+    height: 100px;
+  }
+
+  /* SCENA 2 */
+  10% {
+    /* DIMENSIUNI COMPLETE */
+    width: 100px;
+    height: 100px;
+  }
+
+  /* SCENA 3 */
+  50% {
+    /* MARIREA DIMENSIUNILOR CU JUMATATE */
+    width: 150px;
+    height: 150px;
+  }
+
+  /* SCENA 4 */
+  90% {
+    /* DIMENSIUNI COMPLETE */
+    width: 100px;
+    height: 100px;
+  }
+
+  /* SCENA 5 */
+  100% {
+    /* DIMENSIUNI COMPLETE */
+    width: 100px;
+    height: 100px;
+  }
+}
