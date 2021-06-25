@@ -1,0 +1,88 @@
+/* ======================================================
+
+
+
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FUNDAL */
+  background-color: #272727;
+}
+
+/* ======================================================
+    CLS. 'SLIDER'
+========================================================= */
+.slider {
+  /* DIMENSIUNI */
+  width: 800px;
+  height: 400px;
+
+  /* INCARCARE 'IMG 1' */
+  background: url(../../imgs/animation-effects/img-1.jpg);
+
+  /* @KEYFRAME (NUME, DURATA, TIMING-FUNC., ITERATION-COUNT) */
+  animation: change-bg 10s linear infinite;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'CHANGE-BG'
+  (PT. AFISAREA IMGS. PE RAND LA DIF. INTERVALE DE TIMP)
+========================================================= */
+@keyframes change-bg {
+  /* KEYWORD 1 */
+  0% {
+    /* INCARCARE 'IMG 1' */
+    background: url(../../imgs/animation-effects/img-1.jpg);
+  }
+
+  /* KEYWORD 2 */
+  20% {
+    /* INCARCARE 'IMG 1' */
+    background: url(../../imgs/animation-effects/img-1.jpg);
+  }
+
+  /* KEYWORD 3 */
+  25% {
+    /* INCARCARE 'IMG 2' */
+    background: url(../../imgs/animation-effects/img-2.jpg);
+  }
+
+  /* KEYWORD 4 */
+  45% {
+    /* INCARCARE 'IMG 2' */
+    background: url(../../imgs/animation-effects/img-2.jpg);
+  }
+
+  /* KEYWORD 5 */
+  50% {
+    /* INCARCARE 'IMG 3' */
+    background: url(../../imgs/animation-effects/img-3.jpg);
+  }
+
+  /* KEYWORD 6 */
+  70% {
+    /* INCARCARE 'IMG 3' */
+    background: url(../../imgs/animation-effects/img-3.jpg);
+  }
+
+  /* KEYWORD 7 */
+  75% {
+    /* INCARCARE 'IMG 4' */
+    background: url(../../imgs/animation-effects/img-4.jpg);
+  }
+
+  /* KEYWORD 8 */
+  100% {
+    /* INCARCARE 'IMG 4' */
+    background: url(../../imgs/animation-effects/img-4.jpg);
+  }
+}
