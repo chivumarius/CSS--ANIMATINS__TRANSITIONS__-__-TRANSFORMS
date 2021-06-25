@@ -1,0 +1,136 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background: #ee5253;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================================================
+    CLS. 'LOADER' 
+(PT CREAREA SPATIULUI PATRAT (IN CARE CELE 3 PATRATE SE MISCA))
+========================================================= */
+.loader {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 150px;
+  height: 150px;
+}
+
+/* ======================================================
+    RLEM. 'SPAN'
+(PT. STILIZAREA CELOR '3 PATRATE')
+========================================================= */
+span {
+  position: absolute;
+
+  /* DIMENSIUNI */
+  width: 50px;
+  height: 50px;
+
+  /* CULOARE FUNDAL */
+  background-color: white;
+
+  /* RAZA */
+  border-radius: 4px;
+
+  /* @KEYFRAME - 'CHASE' (URMARIRE)
+  (NUME, DURATA, TIMING-FUNC., ITERATION-COUNT) */
+  animation: chase 2s linear infinite;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':NTH-CHILD(2)'
+(PT. INTARZIERE / DELAY)
+========================================================= */
+span:nth-child(2) {
+  /* INTARZIEREA ANIMATIEI */
+  animation-delay: 0.7s;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':NTH-CHILD(3)'
+(PT. INTARZIERE / DELAY)
+========================================================= */
+span:nth-child(3) {
+  /* INTARZIEREA ANIMATIEI */
+  animation-delay: 01.4s;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ROTATE'
+(PT. 'ROTIREA' PATRATELOR - IN 'TREPTE' LA '90 DE GRADE' )
+========================================================= */
+@keyframes chase {
+  /* SCENA 1 */
+  0% {
+    /* POZITIONARE - 'SUS - STANGA' */
+    top: 0;
+    left: 0;
+  }
+
+  /* SCENA 2 */
+  12.5% {
+    /* POZITIONARE - 'SUS - DREAPTA' */
+    top: 0;
+    left: 50%;
+  }
+
+  /* SCENA 3 */
+  25% {
+    /* POZITIONARE - 'SUS - DREAPTA' */
+    top: 0;
+    left: 50%;
+  }
+
+  /* SCENA 4 */
+  37.5% {
+    /* POZITIONARE - 'JOS - DREAPTA' */
+    top: 50%;
+    left: 50%;
+  }
+
+  /* SCENA 5 */
+  50% {
+    /* POZITIONARE - 'JOS - DREAPTA' */
+    top: 50%;
+    left: 50%;
+  }
+
+  /* SCENA 6 */
+  62.5% {
+    /* POZITIONARE - 'JOS - STANGA' */
+    top: 50%;
+    left: 0;
+  }
+
+  /* SCENA 7 */
+  75% {
+    /* POZITIONARE - 'JOS - STANGA' */
+    top: 50%;
+    left: 0;
+  }
+
+  /* SCENA 8 */
+  87.5% {
+    /* POZITIONARE - 'SUS - STANGA' */
+    top: 0;
+    left: 0;
+  }
+
+  /* SCENA 9 */
+  100% {
+    /* POZITIONARE - 'SUS - STANGA' */
+    top: 0;
+    left: 0;
+  }
+}
