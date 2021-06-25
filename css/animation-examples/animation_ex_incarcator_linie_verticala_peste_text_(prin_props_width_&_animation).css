@@ -1,0 +1,90 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+
+  /* FUNDAL */
+  background: #2c3a47;
+}
+
+/* ======================================================
+    ELEM. 'H1' 
+========================================================= */
+h1 {
+  position: relative;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* DISTANTARE LITERE */
+  letter-spacing: 10px;
+
+  /* CULOARE TEXT */
+  color: white;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':BEFORE' 
+(PT. CREAREA CONTINUTULUI SUPRAPUS)
+========================================================= */
+h1:before {
+  /* CONTINUT */
+  content: "încarcă..";
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* LATIMEA COMPLETA */
+  width: 100%;
+
+  /* CULOAREA TEXTULUI */
+  color: #f6b93b;
+
+  /* LINIE IN DREAPTA */
+  border-right: 4px solid #f6b93b;
+
+  /* ASCUNDERE 'SUPRAPUNERE' */
+  overflow: hidden;
+
+  /* @KEYFRAME - 'ANUMATE'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: animate 5s linear infinite;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ANIMATE'
+(PT. AFISAREA TEXTULUI SUPRATUS LA JUMATATEA DURAREI DE TIMP)
+========================================================= */
+@keyframes animate {
+  /* SCENA 1 */
+  0% {
+    /*   INVIZIBIL   */
+    width: 0;
+  }
+
+  /* SCENA 2 */
+  50% {
+    /* VIZIBIL COMPLET */
+    width: 100%;
+  }
+
+  /* SCENA 3 */
+  100% {
+    /*   INVIZIBIL   */
+    width: 0;
+  }
+}
