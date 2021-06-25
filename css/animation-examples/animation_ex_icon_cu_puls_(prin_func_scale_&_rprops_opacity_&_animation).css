@@ -1,0 +1,105 @@
+/* ======================================================
+
+
+
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-color: #212121;
+}
+
+/* ======================================================
+    CLS. 'PULSE'
+========================================================= */
+.pulse {
+  /* DIMENSIUNI */
+  width: 100px;
+  height: 100px;
+
+  /* COLORI */
+  background-color: #58ea00;
+  color: white;
+
+  /* TRANSF. 'PATRAT' - IN 'CERC' */
+  border-radius: 50%;
+
+  /* DIM. TEXT */
+  font-size: 48px;
+
+  /* ALINIERE TEXT */
+  text-align: center;
+
+  /* INALTIMEA RANDULUI */
+  line-height: 100px;
+
+  /* DURATA SCHIMBARI */
+  position: relative;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':BEFORE' & ':AFTER'
+========================================================= */
+.pulse:before,
+.pulse:after {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+
+  /* BORDER */
+  border: 1px solid #58ea00;
+
+  /* TRANSF. PATRAT IN CERC */
+  border-radius: 50%;
+
+  /* @KEYFRAME 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: pulse 1.5s linear infinite;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':AFTER'
+========================================================= */
+.pulse:after {
+  /* INTARZIERE APARITIE */
+  animation-delay: 0.5s;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'PULSE'
+========================================================= */
+@keyframes pulse {
+  0% {
+    /* 'MICSORAREA' SCAREI - LA 'JUMATATEA' */
+    transform: scale(0.5);
+
+    /* INVIZIBIL */
+    opacity: 0;
+  }
+  50% {
+    /* SCARA 'NORMALA' */
+    transform: scale(1);
+
+    /* VIZIBIL */
+    opacity: 1;
+  }
+  100% {
+    /* MARIREA SCAREI */
+    transform: scale(1.2);
+
+    /* INVIZIBIL */
+    opacity: 0;
+  }
+}
