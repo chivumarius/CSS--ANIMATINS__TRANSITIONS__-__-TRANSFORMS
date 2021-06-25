@@ -1,0 +1,58 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+
+  /* @KEYFRAME (NUME, DURATA, TIMING-FUNC., ITERATION-COUNT) */
+  animation: bgchange 20s infinite;
+}
+
+/* ======================================================
+    ELEM. 'H1'
+========================================================= */
+h1 {
+  font-size: 70px;
+  text-align: center;
+
+  /* CAPITALIZAREA CUVINTELOR */
+  text-transform: capitalize;
+
+  color: white;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'BGCHANGE'
+  (PT. AFISAREA IMGS. PE RAND LA DIF. INTERVALE DE TIMP)
+========================================================= */
+@keyframes bgchange {
+  0% {
+    background-color: #272727;
+  }
+
+  20% {
+    background-color: blue;
+  }
+
+  40% {
+    background-color: tomato;
+  }
+
+  60% {
+    background-color: lightblue;
+  }
+
+  80% {
+    background-color: darkgreen;
+  }
+
+  100% {
+    background-color: #272727;
+  }
+}
