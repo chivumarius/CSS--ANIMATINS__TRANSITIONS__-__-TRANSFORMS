@@ -1,0 +1,155 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FUNDAL */
+  background-color: #2c3e50;
+}
+
+/* ======================================================
+    CLS. 'CRADLE' (LEAGAN)
+========================================================= */
+.cradle {
+  /* FLEX (PT. PLASAREA PE ACEEASI LINIE) */
+  display: flex;
+
+  /* LINIE LA PARTEA SUPERIOARA */
+  border-top: 10px solid white;
+}
+
+/* ======================================================
+    ELEM. 'SPAN'
+(PT. CREAREA 'BAREI DE SUPORT' & 'BRATELOR' LEAGANULUI)
+========================================================= */
+.cradle span {
+  position: relative;
+
+  /* BLOCK */
+  display: block;
+
+  /* DIMENSIUNI */
+  width: 3px;
+  height: 300px;
+
+  /* CULOARE FUNDAL 'BILA' */
+  background-color: white;
+
+  margin: 0 29px;
+
+  /* MUTAREA CENTRULUI DE ROTATIE */
+  transform-origin: top;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':BEFORE'
+(PT. CREAREA CERCURILOR/BILELOR LEAGANULUI)
+========================================================= */
+.cradle span:before {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 60px;
+  height: 60px;
+
+  /* TRANSF. PATRAT IN CERC */
+  border-radius: 50%;
+  /* CULOARE FUNDAL */
+  background-color: white;
+
+  /* PLASAREA IN 'STANGA' (PE AXA 'X') 
+  (PT. 'POZITIONAREA CENTRALA' - PE 'BRATELE' DIN 'SPAN')*/
+  transform: translateX(-50%);
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':FIRST-CHILD'
+    (PT. ANIMAREA 'BRATULUI' DIN 'STANGA')
+========================================================= */
+.cradle span:first-child {
+  /* @KEYFRAME - 'LEFT-ARM'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: left-arm 2s ease-in infinite;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. ':LAST-CHILD'
+    (PT. ANIMAREA 'BRATULUI' DIN 'DREAPTA')
+========================================================= */
+.cradle span:last-child {
+  /* @KEYFRAME - 'RIGHT-ARM'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: right-arm 2s ease-in infinite 1s;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'LEFT-ARM'
+  (PT. 'BRATUL' DIN 'STANGA')
+========================================================= */
+
+@keyframes left-arm {
+  /* KEYFRAME 1 */
+  0% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* KEYFRAME 2 */
+  25% {
+    /* ROTIRE LA '60 DEG' (IN SENSUL ACELOR DE CEASORNIC) */
+    transform: rotate(60deg);
+  }
+
+  /* KEYFRAME 3 */
+  50% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* KEYFRAME 4 */
+  100% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'RIGHT-ARM'
+  (PT. 'BRATUL' DIN 'DREAPTA')
+========================================================= */
+@keyframes right-arm {
+  /* KEYFRAME 1 */
+  0% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* KEYFRAME 2 */
+  25% {
+    /* ROTIRE LA '-60DEG' (IN SENS CONTRAR ACELOR DE CEASORNIC) */
+    transform: rotate(-60deg);
+  }
+
+  /* KEYFRAME 3 */
+  50% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* KEYFRAME 4 */
+  100% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+}
