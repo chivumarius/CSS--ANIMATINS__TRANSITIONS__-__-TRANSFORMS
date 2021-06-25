@@ -1,0 +1,87 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ======================================================
+    CLS. 'CONTAINER' 
+========================================================= */
+.container {
+  position: relative;
+
+  /* DIMENSIUNI  CONTAINER */
+  width: 200px;
+  height: 200px;
+}
+
+/* ======================================================
+    CLS. 'RING' 
+(PT. CREAREA LINIEI IN STANGA CERCULUI )
+========================================================= */
+.ring {
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* LINIE IN STANGA */
+  border-left: 4px solid #262626;
+
+  /* TRANSF. PATRAT IN CERC */
+  border-radius: 50%;
+
+  /* @KEYFRAME - 'ROTIRE' 
+  (NUME, DURATA, TIMING-FUNC, ITERATIN-COUNT) */
+  animation: rotate 1s linear infinite;
+}
+
+/* ======================================================
+    CLS. 'TEXT' 
+========================================================= */
+.text {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* CENTRAREA TEXTULUI */
+  text-align: center;
+  line-height: 200px;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ROTATE'
+(PT. ROTIREA 'BORDER'-ULUI 'STANGA' AL 'CERCULUI')
+========================================================= */
+@keyframes rotate {
+  /* SCENA 1 */
+  0% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* SCENA 2 */
+  100% {
+    /* ROTIRE COMPLETA */
+    transform: rotate(360deg);
+  }
+}
