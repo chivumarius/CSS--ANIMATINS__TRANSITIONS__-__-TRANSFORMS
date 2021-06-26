@@ -1,0 +1,76 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+
+  background-color: #262626;
+}
+
+/* ======================================================
+    CLS. 'LOADING' 
+  (PT. CREAREA LINIEI)
+========================================================= */
+.loading {
+  /* DIMENSIUNILE */
+  width: 300px;
+  height: 3px;
+
+  /* CULOAREA LINIEI */
+  background-color: white;
+
+  /* @KEYFRAME - 'LINE' (NUME, DURATA, ITERATION-COUNT, DIRECTION) 
+  ('ALTERNATE' = 'START' - DE LA 'INCEPUT' - LA 'SFARSIT' 
+                 & DE LA 'SFARSIT' LA 'INCEPUT')*/
+  animation: line 2s infinite alternate;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'LINE'
+(PT. CREAREA 'LINIEI' & 'INGUSTAREA' IN 'STANGA' & 'DREAPTA')
+========================================================= */
+@keyframes line {
+  /* SCENA 1 */
+  0% {
+    /* INVIZIBIL */
+    transform: scaleX(0);
+
+    /* MUTAREA 'ORIGINII' IN 'STANGA' (DEFAULT = 'CENTER') */
+    transform-origin: left;
+  }
+
+  /* SCENA 2 */
+  45% {
+    /* VIZIBIL COMPLET */
+    transform: scaleX(1);
+
+    /* MUTAREA 'ORIGINII' IN 'STANGA' (DEFAULT = 'CENTER') */
+    transform-origin: left;
+  }
+
+  /* SCENA 3 */
+  50% {
+    /* VIZIBIL COMPLET */
+    transform: scaleX(1);
+
+    /* MUTAREA 'ORIGINII' IN 'DREAPTA' */
+    transform-origin: right;
+  }
+
+  /* SCENA 4 */
+  100% {
+    /* INVIZIBIL */
+    transform: scaleX(0);
+
+    /* MUTAREA 'ORIGINII' IN 'DREAPTA' */
+    transform-origin: right;
+  }
+}
