@@ -1,0 +1,172 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  /* FUNDAL */
+  background-color: #212121;
+}
+
+/* ======================================================
+    CLS. 'LINE' 
+(PT. CREAREA LINIEI INFERIOARE)
+========================================================= */
+.line {
+  position: relative;
+
+  /* LATIMEA LINIEI */
+  width: 300px;
+
+  /* LINIE JOS */
+  border-bottom: 4px solid white;
+
+  /* @KEYFRAME - 'ANIMATELINE'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: animateline 2s linear infinite;
+}
+
+/* ======================================================
+NB!  
+  PT. CREAREA 'HEXAGONULUI' = VOM UTILIZA 'DREPTUNGHIUL'
+  * VOM CREA 3 DREPTUNGHIURI, 
+  * PE CARE LE ROTIM DIFERIT. 
+========================================================= */
+
+/* ======================================================
+    CLS. 'HEXAGON' 
+(PT. CREAREA 'DREPTUNGHIULUI 1' - AL 'HEXAGONULUI')
+========================================================= */
+.hexagon {
+  /* POZITIONARE */
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+
+  /* DIMENSIUNI */
+  width: 50px;
+  height: 30px;
+
+  /* FUNDAL */
+  background-color: white;
+
+  /* @KEYFRAME - 'ANIMATEHEXAGON'
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: animatehexagon 2s linear infinite;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':BEFORE' 
+(PT. CREAREA 'DREPTUNGHIULUI 2' - AL 'HEXAGONULUI')
+========================================================= */
+.hexagon:before {
+  content: "";
+
+  /* POZITIONARE IN 'STANGA' */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* FUNDAL */
+  background-color: white;
+
+  /* 'ROTIREA' LA '60 GRADE' */
+  transform: rotate(60deg);
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':AFTER' 
+(PT. CREAREA 'DREPTUNGHIULUI 3' - AL 'HEXAGONULUI')
+========================================================= */
+.hexagon:after {
+  content: "";
+
+  /* POZITIONARE IN 'STANGA' */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* FUNDAL */
+  background-color: white;
+
+  /* 'ROTIREA' LA '-60 GRADE' (ANTI-CLOCKWISE) */
+  transform: rotate(-60deg);
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ANIMATEHEXAGON'
+    (PT. ANIMATIA 'HEXAGON')
+========================================================= */
+@keyframes animatehexagon {
+  /* SCENA 1 */
+  0% {
+    /* PORNIREA DIN 'STANGA' */
+    left: 0;
+  }
+
+  /* SCENA 2 */
+  50% {
+    /* FUNC. DE CALCUL - PT. CA 'HEXAGONUL' SA 'NU DEPASEASCA LINI'A */
+    left: calc(100% - 50px);
+
+    /* ROTIRE LA '720 GRADE' (CICLU DUBLU) */
+    transform: rotate(720deg);
+  }
+
+  /* SCENA 3 */
+  100% {
+    /* INCHEIEREA IN 'STANGA' */
+    left: 0;
+  }
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ANIMATELINE'
+    (PT. ANIMATIA 'LINIEI')
+========================================================= */
+@keyframes animateline {
+  /* SCENA 1 */
+  0% {
+    /* ROTIRE LA '30 GRADE' */
+    transform: rotate(30deg);
+  }
+
+  /* SCENA 2 */
+  25% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* SCENA 3 */
+  50% {
+    /* ROTIRE LA '-30 GRADE' (INVERS ACELOR DE CEASORNIC) */
+    transform: rotate(-30deg);
+  }
+
+  /* SCENA 4 */
+  75% {
+    /* FARA ROTIRE */
+    transform: rotate(0deg);
+  }
+
+  /* SCENA 5 */
+  100% {
+    /* ROTIRE LA '30 GRADE' */
+    transform: rotate(30deg);
+  }
+}
