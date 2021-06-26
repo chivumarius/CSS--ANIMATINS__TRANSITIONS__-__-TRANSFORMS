@@ -1,0 +1,134 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+
+  /* FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  background-color: #212121;
+}
+
+/* ======================================================
+    CLS. 'LOADING' 
+========================================================= */
+.loading {
+  display: flex;
+}
+
+/* ======================================================
+    CLS. 'OBJ' 
+(PT. CREAREA 'LINIILOR VERTICALE')
+========================================================= */
+.obj {
+  /* DIMENSIUNEA LINIEI VERTICALE */
+  width: 6px;
+  height: 40px;
+
+  /* CULOAREA LINIEI */
+  background-color: white;
+
+  /* 'DISTANTAREA' PE 'ORIZONTALA' */
+  margin: 0 3px;
+
+  /* RAZA */
+  border-radius: 10px;
+
+  /* MUTAREA 'ORIGINII' - 'TOP' (DEFAULT = 'CENTER') */
+  /* transform-origin: top; */
+
+  /* MUTAREA 'ORIGINII' - 'CENTER' */
+  /* transform-origin: center; */
+
+  /* MUTAREA 'ORIGINII' - 'JOS' */
+  transform-origin: bottom;
+
+  /* @KEYFRAME 'LOADING' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT) */
+  animation: loading 0.8s linear infinite;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(2)' 
+========================================================= */
+.obj:nth-child(2) {
+  /* INTARZIEREA - '10 MS' */
+  animation-delay: 0.1s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(3)' 
+========================================================= */
+.obj:nth-child(3) {
+  /* INTARZIEREA - '20 MS' */
+  animation-delay: 0.2s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(4)' 
+========================================================= */
+.obj:nth-child(4) {
+  /* INTARZIEREA - '30 MS' */
+  animation-delay: 0.3s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(5)' 
+========================================================= */
+.obj:nth-child(5) {
+  /* INTARZIEREA - '40 MS' */
+  animation-delay: 0.4s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(6)' 
+========================================================= */
+.obj:nth-child(6) {
+  /* INTARZIEREA - '50 MS' */
+  animation-delay: 0.5s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(7)' 
+========================================================= */
+.obj:nth-child(7) {
+  /* INTARZIEREA - '60 MS' */
+  animation-delay: 0.6s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(8)' 
+========================================================= */
+.obj:nth-child(8) {
+  /* INTARZIEREA - '70 MS' */
+  animation-delay: 0.7s;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'LINE'
+(PT. CREAREA 'LINIEI' & 'INGUSTAREA' IN 'STANGA' & 'DREAPTA')
+========================================================= */
+
+@keyframes loading {
+  /* SCENA 1 */
+  0% {
+    /* INVIZIBILITATE (PT. PORNIREA DE LA ZERO) */
+    transform: scaleY(0);
+  }
+
+  /* SCENA 2 */
+  50% {
+    /* VIZIBILITATE COMPLETA */
+    transform: scaleY(1);
+  }
+
+  /* SCENA 3 */
+  100% {
+    /* INVIZIBILITATE */
+    transform: scaleY(0);
+  }
+}
