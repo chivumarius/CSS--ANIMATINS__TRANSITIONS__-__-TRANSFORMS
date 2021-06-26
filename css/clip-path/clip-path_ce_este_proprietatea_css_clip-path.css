@@ -1,0 +1,60 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* FUNDAL 'NEGRU' */
+  background-color: #2f2f2f;
+}
+
+/* ======================================================
+    ELEM. 'IMG'
+========================================================= */
+img {
+  width: 300px;
+  height: 300px;
+
+  /* ___________________________________________
+  PROP. 'CLIP-PATH' = 
+     FUNC. 'POLYGON(LEFT TOP, LEFT TOP, LEFT TOP)' 
+    __________________________________________*/
+
+  /* DECUPAREA 'IMG' SUB FORMA DE 'TRIUNGHI' (CU 'VARFUL' IN 'SUS') */
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+
+  /* DECUPAREA 'IMG' SUB FORMA DE 'TRIUNGHI' (CU 'VARFUL' IN 'JOS') */
+  /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+
+  /* DECUPAREA 'IMG' SUB FORMA DE 'TRIUNGHI' (CU 'VARFUL' IN 'DREAPTA') */
+  /* clip-path: polygon(0% 0%, 100% 50%, 0% 100%); */
+
+  /* DECUPAREA 'IMG' SUB FORMA DE 'TRIUNGHI' (CU 'VARFUL' IN 'STANGA') */
+  /* clip-path: polygon(0% 50%, 100% 100%, 100% 0%); */
+
+  /* DECUPARE 'CERC' 
+  FUNC. 'CIRCLE()'*/
+  clip-path: circle(50% at 50% 50%);
+
+  /* DECUPARE 'STEA' 
+  FUNC. 'POLYGON(LEFT TOP, ...)'*/
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
