@@ -1,0 +1,218 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  height: 100vh;
+
+  background-color: #333;
+}
+
+/* ======================================================
+    CLS. 'CONTAINER' 
+========================================================= */
+.container {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* ASCUNDEREA 'SUPRAPUNERILOR' */
+  overflow: hidden;
+}
+
+/* ======================================================
+    CLS. 'TEXT' 
+========================================================= */
+.text {
+  /* POZITIONARE */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: 45px;
+  color: white;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* LINII 'SUS' & 'JOS' */
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+
+  /* PLASARE IN EXTERIOR */
+  transform: translate(-50%, -50%);
+}
+
+/* ======================================================
+    CLS. 'SQUARE' (PATRAT)
+========================================================= */
+.square {
+  /* POZITIONARE */
+  position: absolute;
+  bottom: -100px;
+
+  /* FUNDAL  */
+  background-color: #f2f2f2;
+
+  /* @KEYFRAME - 'BOXES'
+  (NUME, DURATA, TIMING-FUNCTION, ITERAYTION-COLOR) */
+  animation: boxes 10s ease-in-out infinite;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(1)' 
+========================================================= */
+.square:nth-child(1) {
+  /* DIMENSIUNI */
+  width: 75px;
+  height: 75px;
+
+  left: 7%;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(2)' 
+========================================================= */
+.square:nth-child(2) {
+  /* DIMENSIUNI */
+  width: 65px;
+  height: 65px;
+
+  left: 15%;
+
+  /* INTARZIEREA CU '4S' */
+  animation-delay: 4s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(3)' 
+========================================================= */
+.square:nth-child(3) {
+  /* DIMENSIUNI */
+  width: 82px;
+  height: 82px;
+
+  left: 45%;
+
+  /* INTARZIEREA CU '8S' */
+  animation-delay: 8s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(4)' 
+========================================================= */
+.square:nth-child(4) {
+  /* DIMENSIUNI */
+  width: 70px;
+  height: 70px;
+
+  left: 55%;
+
+  /* INTARZIEREA CU '2S' */
+  animation-delay: 2s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(5)' 
+========================================================= */
+.square:nth-child(5) {
+  /* DIMENSIUNI */
+  width: 60px;
+  height: 60px;
+
+  left: 27%;
+
+  /* INTARZIEREA CU '6S' */
+  animation-delay: 6s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(6)' 
+========================================================= */
+.square:nth-child(6) {
+  /* DIMENSIUNI */
+  width: 55px;
+  height: 55px;
+
+  left: 60%;
+
+  /* INTARZIEREA CU '4S' */
+  animation-delay: 4s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(7)' 
+========================================================= */
+.square:nth-child(7) {
+  /* DIMENSIUNI */
+  width: 90px;
+  height: 90px;
+
+  left: 85%;
+
+  /* INTARZIEREA CU '9S' */
+  animation-delay: 9s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(8)' 
+========================================================= */
+.square:nth-child(8) {
+  /* DIMENSIUNI */
+  width: 70px;
+  height: 70px;
+
+  left: 75%;
+
+  /* INTARZIEREA CU '4S' */
+  animation-delay: 4s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(9)' 
+========================================================= */
+.square:nth-child(9) {
+  /* DIMENSIUNI */
+  width: 45px;
+  height: 45px;
+
+  left: 10%;
+
+  /* INTARZIEREA CU '7S' */
+  animation-delay: 7s;
+}
+
+/* ======================================================
+    PSEUDO-CLS. ':NTH-CHILD(10)' 
+========================================================= */
+.square:nth-child(10) {
+  /* DIMENSIUNI */
+  width: 55px;
+  height: 55px;
+
+  left: 60%;
+
+  /* INTARZIEREA CU '7S' */
+  animation-delay: 7s;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'LINE'
+========================================================= */
+@keyframes boxes {
+  /* SCENA 1 */
+  0% {
+    /* 'PORNIREA' DE 'SUB PAGINA' */
+    bottom: -100px;
+  }
+
+  /* SCENA 2 */
+  100% {
+    /* 'PATRATUL' DEVINE 'ASCUNS' IN PARTEA DE 'SUS' A PAGINII */
+    bottom: 100%;
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+}
