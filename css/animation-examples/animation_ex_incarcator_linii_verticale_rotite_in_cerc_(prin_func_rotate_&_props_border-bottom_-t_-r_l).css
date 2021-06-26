@@ -1,0 +1,153 @@
+/* ======================================================
+    ELEM. '*' (TOATE)
+========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #222d3e;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================================================
+    CLS. 'LOADER' 
+========================================================= */
+.loader {
+  /* POZITIONARE */
+  position: relative;
+
+  /* DIMENSIONARE */
+  width: 200px;
+  height: 200px;
+}
+
+/* ======================================================
+    CLS. 'OUTER' 
+(PT. CERCUL 'EXTERN') 
+========================================================= */
+.outer {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* BORDER-URI 'ROSII' */
+  border-left: 5px solid #eb4d4b;
+  border-right: 5px solid #eb4d4b;
+
+  /* BORDER-URI 'TRANSPARENTE' */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+  /* TRANSF. 'PATRAT' IN 'CERC' */
+  border-radius: 50%;
+
+  /* @KEYFRAME - 'ROTATE'
+  (NUME, DURATA, TIMING-FUBC, ITERATION-COUNT) */
+  animation: rotate 1s linear infinite;
+}
+
+/* ======================================================
+    CLS. 'MIDDLE' 
+(PT. CERCUL 'MIJLOCIU') 
+========================================================= */
+.middle {
+  /* POZITIE */
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+
+  /* BORDER-URI 'VERZI' */
+  border-left: 5px solid #218c74;
+  border-right: 5px solid #218c74;
+
+  /* BORDER-URI 'TRANSPARENTE' */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+  /* TRANSF. 'PATRAT' IN 'CERC' */
+  border-radius: 50%;
+
+  /* @KEYFRAME - 'ROTATE'
+  (NUME, DURATA, TIMING-FUBC, ITERATION-COUNT, DIRECTION)
+  REVERSE = DE LA 'SFARSIT' LA 'INCEPUT' (SCHIMBA SENSUL DE ROTATIE) */
+  animation: rotate 1s linear infinite reverse;
+}
+
+/* ======================================================
+    CLS. 'INNER' 
+(PT. CERCUL 'INTERIOR') 
+========================================================= */
+.inner {
+  /* POZITIONARE */
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  bottom: 60px;
+
+  /* BORDER-URI 'GALBENE' */
+  border-left: 5px solid #ccae62;
+  border-right: 5px solid #ccae62;
+
+  /* BORDER-URI 'TRANSPARENTE' */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+  /* TRANSF. 'PATRAT' IN 'CERC' */
+  border-radius: 50%;
+
+  /* @KEYFRAME - 'ROTATE'
+  (NUME, DURATA, TIMING-FUBC, ITERATION-COUNT) */
+  animation: rotate 1s linear infinite;
+}
+
+/* ======================================================
+    CLS. 'DOT' 
+(PT. 'PUNCT'/ CERCUL 'UMPLUT') 
+========================================================= */
+.dot {
+  /* POZITIONARE */
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  right: 90px;
+  bottom: 90px;
+
+  /* FUNDAL PUNCT */
+  background-color: white;
+
+  /* TRANSF. 'PATRAT' IN 'CERC' */
+  border-radius: 50%;
+}
+
+/* ======================================================
+    @KEYFRAME-UL 'ROTATE'
+========================================================= */
+@keyframes rotate {
+  /* SCENA 1 */
+  0% {
+    /* FARA ROTATIE */
+    transform: rotate(0deg);
+  }
+
+  /* SCENA 2 */
+  100% {
+    /* ROTATIE COMPLETA (CLOCWISE) */
+    transform: rotate(360deg);
+  }
+}
