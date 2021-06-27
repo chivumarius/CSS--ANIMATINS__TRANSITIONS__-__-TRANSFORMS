@@ -1,0 +1,99 @@
+/* ======================================================
+  IMPORTARE  FONT  'POPPINS'
+========================================================= */
+@import url("https://fonts.googleapis.com/css?familt=poppins:200,300,400,500,600,700,800,900&display=swap");
+
+/* ======================================================
+    ELEM. '*'
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  /* FLEX    */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background: #222;
+}
+
+/* ======================================================
+    ELEM. 'A'
+========================================================= */
+a {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 180px;
+  height: 60px;
+}
+
+/* ======================================================
+    ELEM. 'SPAN'
+  (PT. 'BUTONUL 1' DE CULOARE 'ALBASTRU')
+========================================================= */
+a span {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  background-color: #4834d4;
+
+  text-align: center;
+  line-height: 60px;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* SPATIERE LITERE */
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'NTH-CHILD(2)'
+  (PT. 'BUTONUL 2' DE CULOARE 'ALBA')
+========================================================= */
+span:nth-child(2) {
+  background-color: white;
+  color: #4834d4;
+
+  /* DECUPAREA 'FORMEI' DIN 'DREAPTA' */
+  clip-path: polygon(61% 0, 100% 0%, 100% 100%, 60% 100%, 40% 52%);
+
+  /* DURATA SCHIMBARI */
+  transition: 0.5s;
+}
+
+/* ======================================================
+    HOVER - PSEUDO-ELEM. 'NTH-CHILD(2)'
+(PT. 'AFISAREA COMPLETA' A 'BUTONULUI 2' - 'ALB')
+========================================================= */
+span:nth-child(2):hover {
+  /* FORMA COMPLETA A IMAGINII */
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 53%);
+}
+
+/* ======================================================
+   HOVER - PSEUDO-ELEM. 'NTH-CHILD(1)'
+(PT. 'AFISAREA COMPLETA' A 'BUTONULUI 1' -  'ALBASTRU')
+========================================================= */
+span:nth-child(1):hover ~ span {
+  /* 'ASCUNDEREA' IN 'DREAPTA' - A 'FORMEI ALBE' */
+  clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+}
