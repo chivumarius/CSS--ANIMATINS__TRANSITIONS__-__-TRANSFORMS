@@ -1,0 +1,68 @@
+/* ======================================================
+    IMPORTARE FONT 'RALEWAY'
+========================================================= */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Raleway", Arial, sans-serif;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================================================
+    CLS. 'CARD'
+(PT. CREAREA CERCULUI)
+========================================================= */
+.card {
+  /* DIMENSIUNI */
+  width: 500px;
+  height: 250px;
+
+  /* FUNDAL */
+  background-color: #c7ecee;
+
+  padding: 20px 80px 20px 20px;
+
+  /* RAZA */
+  border-radius: 10px;
+
+  /* DECUPARE 'CERC MIC' IN 'DREAPTA SUS'
+  FUNC. CIRCLE() */
+  clip-path: circle(7% at 93% 20%);
+
+  /* DURATA 'SCHIMBARI' */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+    ELEM. 'H1'
+========================================================= */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* ======================================================
+    ELEM. 'P'
+========================================================= */
+p {
+  font-size: 18px;
+}
+
+/* ======================================================
+    HOVER - CLS. 'CARD'
+  (PT. AFISAREA CONTINUTULUI COMPLET AL ELEM. 'H1' & 'P')
+========================================================= */
+.card:hover {
+  /* DECUPARE 'CERC'
+  FUNC. CIRCLE() */
+  clip-path: circle(70%);
+}
