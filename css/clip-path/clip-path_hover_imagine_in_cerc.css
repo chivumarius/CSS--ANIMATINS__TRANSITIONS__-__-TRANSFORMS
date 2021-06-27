@@ -1,0 +1,140 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: sans-serif;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================================================
+    CLS. 'CARD'
+========================================================= */
+.card {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 335px;
+  height: 500px;
+}
+
+/* ======================================================
+    CLS. 'IMG'
+========================================================= */
+.img {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* DECUPARE 'CERC' */
+  clip-path: circle(70.7% at 50% 50%);
+
+  /* DURATA 'SCHIMBARI' */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+    ELEM. 'IMG'
+========================================================= */
+img {
+  width: 100%;
+}
+
+/* ======================================================
+    HOVER - CLS. 'CARD'
+========================================================= */
+.card:hover .img {
+  clip-path: circle(18.2% at 50% 38%);
+}
+
+/* ======================================================
+    CLS. 'CONTENT'
+========================================================= */
+.content {
+  /* POZITIONARE */
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+
+  text-align: center;
+}
+
+/* ======================================================
+    ELEM. 'H2'
+========================================================= */
+h2 {
+  padding: 0;
+  margin: 0;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+}
+
+/* ======================================================
+    ELEM. 'P'
+========================================================= */
+p {
+  margin-bottom: 25px;
+  font-size: 16px;
+
+  /* CAPITALIZARE CUVINTE */
+  text-transform: capitalize;
+}
+
+/* ======================================================
+    ELEM. 'A'
+========================================================= */
+a {
+  /* BLOC IN LINIE */
+  display: inline-block;
+  text-decoration: none;
+
+  background-color: black;
+  color: white;
+
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+/* ======================================================
+    ELEM. 'H2' & 'P' & 'A'
+========================================================= */
+h2,
+p,
+a {
+  /* INVIZIBIL */
+  opacity: 0;
+
+  /* MUTAREA (PE AXA 'Y') */
+  transform: translateY(20px);
+
+  /* DURATA 'SCHIMBARI' */
+  transition: 0.3s;
+}
+
+/* ======================================================
+    HOVER - ELEM. 'H2' & 'P' & 'A'
+========================================================= */
+.card:hover h2,
+.card:hover p,
+.card:hover a {
+  /* VIZIBILITATE COMPLETA */
+  opacity: 1;
+
+  /* MUTAREA 'SUS' (PE AXA 'Y') */
+  transform: translateY(0);
+
+  /* INTARZIEREA 'SCHIMBARI' */
+  transition-delay: 0.5s;
+}
