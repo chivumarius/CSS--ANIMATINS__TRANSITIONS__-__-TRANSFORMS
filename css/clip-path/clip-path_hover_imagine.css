@@ -1,0 +1,113 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #555;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================================================
+    CLS. 'CONTAINER'
+========================================================= */
+.container {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 800px;
+  height: 500px;
+
+  /* FUNDAL */
+  background-color: #222;
+}
+
+/* ======================================================
+    CLS. 'CLIP'
+========================================================= */
+.clip {
+  /* POZITIONAREA */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* DURATA SCHIMBARI */
+  transition: all 0.5s;
+}
+
+/* ======================================================
+    CLS. 'CLIP1'
+(PT. INCARCAREA & DECUPAREA - 'IMAGINII 1')
+========================================================= */
+.clip1 {
+  /* 'IMG 1' DE FUNDAL */
+  background: url(../../imgs/clip-path/1.jpg);
+
+  background-size: cover;
+  background-position: center;
+
+  /* DECUPARE 'TRAPEZ'- 'INCLINAT' LA 'STANGA'
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(0 0, 17% 0, 49% 100%, 0% 100%);
+}
+
+/* ======================================================
+    CLS. 'CLIP2'
+(PT. INCARCAREA & DECUPAREA - 'IMAGINII 2')
+========================================================= */
+.clip2 {
+  /* 'IMG 2' DE FUNDAL */
+  background: url(../../imgs/clip-path/2.jpg);
+
+  background-size: cover;
+  background-position: center;
+
+  /* DECUPARE 'CON' CU 'VARFUL' IN 'JOS'
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(13% 0, 81% 0, 59% 100%, 36% 100%);
+}
+
+/* ======================================================
+    CLS. 'CLIP3'
+(PT. INCARCAREA & DECUPAREA - 'IMAGINII 3')
+========================================================= */
+.clip3 {
+  /* 'IMG 3' DE FUNDAL */
+  background: url(../../imgs/clip-path/3.jpg);
+
+  background-size: cover;
+  background-position: center;
+
+  /* DECUPARE 'TRAPEZ'- 'INCLINAT' LA 'DREAPTA'
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(79% 0, 100% 0, 100% 100%, 59% 100%);
+}
+
+/* ======================================================
+    HOVER - CLS. 'CONTAINER'
+(PT. ASCUNDEREA 'DECUPARE')
+========================================================= */
+.container:hover .clip {
+  /* ASCUNDEREA 'DECUPARE' IN 'DREAPTA SUS' & 'DREAPTA JOS'
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+/* ======================================================
+    HOVER - CLS. 'CLIP'
+  (PT. AFISAREA IMAGINILOR COMPLETE)
+========================================================= */
+.container .clip:hover {
+  /* DECUPARE 'DREPTUNGHI' 
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
