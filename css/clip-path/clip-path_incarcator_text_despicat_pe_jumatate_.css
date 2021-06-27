@@ -1,0 +1,125 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Raleway", Arial, sans-serif;
+}
+
+/* ======================================================
+    CLS. 'LOADER'
+(PT. STILIZAREA CONTAINER-ULUI)
+========================================================= */
+.loader {
+  position: relative;
+
+  /* DIMENSIUNI */
+  width: 300px;
+  height: 60px;
+
+  /* BORDER */
+  border: 7px solid #0a3d62;
+
+  /* RAZA */
+  border-radius: 10px;
+  text-align: center;
+  line-height: 60px;
+
+  /* ASCUNDERE 'SUPRAPUNERE' */
+  overflow: hidden;
+}
+
+/* ======================================================
+    ELEM. 'SPAN'
+  (PT. 'SUPRAPUNEREA TEXTELOR' & 'STILIZAREA COMUNA'
+   A CELOR '2 ELEMENTE')
+========================================================= */
+span {
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* DIMENSIUNI */
+  width: 100%;
+  height: 100%;
+
+  /* DIMENSIUNE TEXT */
+  font-size: 48px;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* GROSIME (SUB 'BOLD') */
+  font-weight: 600;
+}
+
+/* ======================================================
+    CLS. 'TOP-HALF'
+(PT. 'CULOAREA', MISCAREA 'STANGA' LA 'FREAPTA'  & FORMA CLS. 'SUPERIOARE')
+========================================================= */
+.top-half {
+  /* CULOARE TEXT 'ROSU' */
+  color: #ee5253;
+
+  /* DECUPARE 'DREPTUNGHI'  
+  FUNC. 'POLYGON(LEFT TOP, ..)' */
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+
+  /* FEYFRAME - 'SPLIT' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT)*/
+  animation: split 4s linear infinite;
+}
+
+/* ======================================================
+    CLS. 'BOTTOM-HALF'
+(PT. 'CULOAREA', DIRECTIA 'DREAPTA' LA 'STANGA' & FORMA CLS. 'SUPERIOARE')
+========================================================= */
+.bottom-half {
+  /* CULOARE TEXT 'ALBASTRU' */
+  color: #0a3d62;
+
+  /* DECUPARE 'DREPTUNGHI'  
+  FUNC. 'POLYGON(LEFT TOP, ..)' */
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+
+  /* FEYFRAME - 'SPLIT' 
+  (NUME, DURATA, TIMING-FUNC, ITERATION-COUNT, DIRECTIE)*/
+  animation: split 4s linear infinite reverse;
+}
+
+/* ======================================================
+    @KEYFRAME 'SPLIT'
+========================================================= */
+@keyframes split {
+  /* SCENA 1 */
+  0% {
+    /* PORNIREA DIN 'DREAPTA' (PE AXA 'X') */
+    transform: translateX(100%);
+  }
+
+  /* SCENA 2 */
+  40% {
+    /* MUTAREA IN 'STANGA' (PE AXA 'X') */
+    transform: translateX(0);
+  }
+
+  /* SCENA 3 */
+  60% {
+    /* MUTAREA IN 'STANGA' (PE AXA 'X') */
+    transform: translateX(0);
+  }
+
+  /* SCENA 4 */
+  100% {
+    /* INCHIEREA PRIN MUTAREA IN 'EXTERIOR STANGA' (PE AXA 'X') */
+    transform: translateX(-100%);
+  }
+}
