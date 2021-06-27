@@ -1,0 +1,175 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  height: 100vh;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", Arial, sans-serif;
+
+  background-color: rgb(236, 236, 236);
+}
+
+/* ======================================================
+    ELEM. 'UL'
+========================================================= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================================================
+    ELEM. 'LI'
+========================================================= */
+li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0px;
+
+  /* ASCUNDEREA 'SUPRAPUNERII' ('LINIA ORIZONTALA' CE 'TAIE TEXTUL') */
+  overflow: hidden;
+}
+
+/* ======================================================
+    ELEM. 'A'
+========================================================= */
+a {
+  position: relative;
+
+  /* BLOC */
+  display: block;
+  text-align: center;
+
+  margin: 0;
+  padding: 5px 10px;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-size: 60px;
+  font-weight: 900;
+
+  /* TEXT 'TRANSPARENT' */
+  color: transparent;
+
+  /* DUTRATA SCHIMBARI */
+  transition: 0.5s;
+}
+
+/* ======================================================
+   PSEUDO-ELEM. 'A:BEFORE'
+(PT CREAREA TEXTULUI DECUPAT SUPERIOR)
+========================================================= */
+a:before {
+  /* CONTINUTUL ELEM. 'DATA-TEXT' */
+  content: attr(data-text);
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 5px 0;
+  color: #262626;
+
+  box-sizing: border-box;
+
+  /*  DECUPARE 'DREPTUNGHI SUPERIOR' */
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+
+  /* DURATA 'SCHIMBARI' */
+  transition: 0.5s;
+
+  /* INTARZIEREA 'SCHIMBARI' */
+  transition-delay: 0.25s;
+}
+
+/* ======================================================
+   HOVER - PSEUDO-ELEM. 'A:BEFORE'
+(PT. PARTEA 'SUPERIOARA' A 'TEXTULUI')
+========================================================= */
+a:hover:before {
+  color: rgb(160, 0, 0);
+
+  /* 'NUTAREA' SPRE 'COLTUL' DIN 'DREAPTA SUS' */
+  transform: translate(10px, -3px);
+}
+
+/* ======================================================
+   PSEUDO-ELEM. 'A:AFTER'
+(PT CREAREA TEXTULUI DECUPAT INFERIOR)
+========================================================= */
+a:after {
+  /* CONTINUTUL ELEM. 'DATA-TEXT' */
+  content: attr(data-text);
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  color: #262626;
+
+  padding: 5px 0;
+  box-sizing: border-box;
+
+  /* FUNC. 'POLYGON()' */
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+
+  /*  DECUPARE 'DREPTUNGHI INFERIOR' */
+  transition: 0.5s;
+
+  /* INTARZIEREA 'SCHIMBARI' */
+  transition-delay: 0.25s;
+}
+
+/* ======================================================
+  HOVER - PSEUDO-ELEM. 'A:AFTER'
+(PT. PARTEA 'INFERIOARA' A 'TEXTULUI')
+========================================================= */
+a:hover:after {
+  color: rgb(160, 0, 0);
+
+  /* 'NUTAREA' SPRE 'COLTUL' DIN 'STANGA JOS' */
+  transform: translate(-10px, 3px);
+}
+
+/* ======================================================
+   PSEUDO-ELEM. 'LI:BEFORE'
+  (PT. CREAREA 'LINIEI ORIZONTALE' CE 'TAIE TEXTUL')
+========================================================= */
+li:before {
+  content: "";
+
+  /* POZITIONARE */
+  position: absolute;
+  top: 50%;
+  left: -100%;
+
+  /* DIMENSIUNE */
+  width: 100%;
+  height: 1px;
+
+  /* FUNDAL */
+  background-color: #262626;
+
+  /* MUTAREA IN EXTERIOR (PE AXA 'Y') */
+  transform: translateY(-50%);
+
+  /* DURATA SCHIMBARI */
+  transition: 0.5s;
+}
+
+/* ======================================================
+   HOVER - PSEUDO-ELEM. 'LI:BEFORE'
+========================================================= */
+li:hover:before {
+  /* PLASAREA PESTE TEXT */
+  left: 100%;
+}
