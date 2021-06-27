@@ -1,0 +1,82 @@
+/* ======================================================
+    ELEM. 'BODY'
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #c8d6e5;
+
+  /* FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================================================
+    CLS. 'MAIN'
+========================================================= */
+.main {
+  position: relative;
+  width: 800px;
+}
+
+/* ======================================================
+    ELEM. 'H1'
+========================================================= */
+h1 {
+  /* POZITIONARE */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  text-align: center;
+  font-size: 220px;
+
+  /* LITERE MARI */
+  text-transform: uppercase;
+
+  /* MUTAREA IN EXTERIOR (PE AXELE 'X' & 'Y') */
+  transform: translate(-50%, -50%);
+}
+
+/* ======================================================
+    PSEUDO-ELEM. 'NTH-CHILD(2)'
+========================================================= */
+h1:nth-child(2) {
+  color: white;
+
+  /* 'CULOARE' DE 'FUNDAL' CA CEA A 'PAGINII' */
+  background-color: #c8d6e5;
+
+  /* DECUPARE 'TRIUNGHI' IN 'STANGA' 
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+
+  /* DURATA 'SCHIMBARI' */
+  transition: 0.5s;
+}
+
+/* ======================================================
+    HOVER - PSEUDO-ELEM. 'NTH-CHILD(2)'
+ (PT 'VIZUALIZAREA COMPLETA' A CUVANTULUI 'ALB')
+========================================================= */
+h1:nth-child(2):hover {
+  /* 'AFISAREA COMPLETA' - PRIN DECUPARE 'DREPTUNGHI'  
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* ======================================================
+    HOVER - PSEUDO-ELEM. 'NTH-CHILD(1)'
+ (PT 'VIZUALIZAREA COMPLETA' A CUVANTULUI 'NEGRU')
+========================================================= */
+h1:nth-child(1):hover ~ h1 {
+  /* 'AFISAREA COMPLETA' - PRIN 'ASCUNDEREA DECUPARI' 'LINIE SUS' (FARA 'FORM')  
+  (PRIN FUNC. 'POLIGON(LEFT TOP, ..)') */
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
